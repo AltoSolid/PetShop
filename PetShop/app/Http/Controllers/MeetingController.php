@@ -7,7 +7,7 @@ class MeetingController extends Controller
 {
     public function showAll(){
         $data = []; //to be sent to the view
-        $data["title"] = "All products";
+        $data["title"] = "All meetings";
         $data["meetings"] = Meeting::all()->sortBy("id");
         return view('meeting.show')->with("data",$data);
     }
