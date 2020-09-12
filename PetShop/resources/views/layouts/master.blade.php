@@ -6,10 +6,16 @@
 
     <!-- Styles -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="{{ asset('css/customStyle.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  -->
+    <!--integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!--    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">            LOCAL -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+    <link href="{{ asset('css/customStyle.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -42,9 +48,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Future authentication Links -->
-                        <a class="navbar-brand" href="{{('/contact') }}">
-                            Contact
-                        </a>
+                        <a class="navbar-brand" href="{{('/contact') }}"> Contact</a>
+                        <a href="{{ route('meeting.show') }}"> Show meeting </a>
+                        <a href="{{ route('meeting.create') }}"> Create meeting</a>                        
                     </ul>
                 </div>
             </div>
@@ -56,5 +62,9 @@
 </body>
 
 <!-- Scripts -->
-
+<script type="text/javascript">
+    $('.date').datepicker({
+        format: 'yyyy-mm-dd'
+    });
+</script>
 </html>

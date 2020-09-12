@@ -1,15 +1,15 @@
-.card-header{
+.card-header {
     font-weight: bold;
     font-family: "montserrat";
     font-size: 20px;
 }
 
-.buttons_container{
+.buttons_container {
     text-align: center;
     margin-top: 360;
 }
 
-.btn{
+.btn {
     color: white;
     border: 1px solid #000000;
     background: none;
@@ -22,18 +22,21 @@
     position: relative;
     overflow: hidden;
     background-color: #3498db;
-  }
+}
 
-  .button_form,.button_listObj{
+.button_form,
+.button_listObj {
     color: white;
-  }
+}
 
-  .button_form:hover,.button_listObj:hover{
+.button_form:hover,
+.button_listObj:hover {
     color: white;
     border: 1px solid yellowgreen;
     background-color: yellowgreen;
-  }
-  .btn::before{
+}
+
+.btn::before {
     color: white;
     content: "";
     position: absolute;
@@ -43,42 +46,63 @@
     background: #3498db;
     z-index: -1;
     transition: 0.8s;
-  }
-  .button_form::before,.button_listObj::before{
+}
+
+.button_form::before,
+.button_listObj::before {
     top: 0;
     border-radius: 0 0 50% 50%;
-  }
+}
 
-  .button_form:hover::before,.button_listObj:hover::before{
+.button_form:hover::before,
+.button_listObj:hover::before {
     height: 180%;
-  }
- 
-  .image{
-      width: 128;
-      height: 128;
-  }
-  
-  .card-body{
+}
+
+.image {
+    width: 128;
+    height: 128;
+}
+
+.card-body {
     font-family: "montserrat";
     font-size: 20px;
-  }
+}
 
-
-  .navbar-brand{
+.navbar-brand {
     font-family: "montserrat";
     font-size: 20px;
-  }
+}
 
-  .form{
+.form {
     font-weight: bold;
     font-family: "montserrat";
     font-size: 20px;
     margin: 8px;
-  }
+}
 
-  .info{
+.info {
     font-weight: bold;
     font-family: "montserrat";
     font-size: 20px;
     margin: 8px;
-  }
+}
+
+.input1 {
+    margin-bottom: 175px;
+}
+
+.input2 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.input3 {
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 174px;
+    border-color: black;
+}
