@@ -11,18 +11,23 @@ class Meeting extends Model
         return $this->attributes['id'];
     }
 
+
     public function setId($id)
     {
         $this->attributes['id'] = $id;
     }
 
+
     public function user() 
     {
         return $this->belongsToMany('App\User');
     }
+
     
     public function meeting()
     {
         return $this->belongsToMany('App\Meeting');
     }
+
+    
 }

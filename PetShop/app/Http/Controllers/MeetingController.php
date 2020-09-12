@@ -12,6 +12,7 @@ class MeetingController extends Controller
         return view('meeting.show')->with("data",$data);
     }
 
+
     public function showID($id)
     {
         $data = []; 
@@ -43,6 +44,8 @@ class MeetingController extends Controller
             Meeting::create($request->only(["place","date","details"]));
             return back()->with('success','Item created successfully!');        
     }
+
+
     public function destroy($id)
     {
         $deleted = Meeting::find($id);
@@ -51,4 +54,5 @@ class MeetingController extends Controller
 
     }
 
+    
 }
