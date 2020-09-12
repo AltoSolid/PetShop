@@ -32,6 +32,7 @@ Route::get('/delete/{id}', 'PetController@delete')->name("pet.delete");
 Route::post('/save', 'PetController@save')->name("pet.save");
 
 
+
 //PRODUCT
 
 Route::get('/product/create', 'ProductController@create')->name("product.create");
@@ -55,3 +56,18 @@ Route::get('/order/show/{id}', 'OrderController@petInfo')->name("order.showInfo"
 Route::get('/order/delete/{id}', 'OrderController@delete')->name("order.delete");
 
 Route::post('/order/save', 'OrderController@save')->name("order.save");
+
+
+//Meeting Routes
+
+//Route::get('/meeting', 'HomeController@index')->name("home.index");
+
+Route::get('/meeting/create','MeetingController@create')->name("meeting.create");
+
+Route::get('/meeting/show', 'MeetingController@showAll')->name("meeting.show");
+
+Route::get('/meeting/show/{id}', 'MeetingController@showId')->name("meeting.showID");
+
+Route::post('/meeting/save', 'MeetingController@save')->name("meeting.save");
+
+Route::get('/meeting/destroy/{id}', 'MeetingController@destroy')->name("meeting.destroy");
