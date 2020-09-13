@@ -25,7 +25,7 @@ class PetController extends Controller
 
         //$data["title"] = $pet->getPetName();
         $data["pets"] = $pet;
-        return view('pet.listObj')->with("data", $data);
+        return view('pet.show')->with("data", $data);
     }
 
 
@@ -45,7 +45,7 @@ class PetController extends Controller
         $pet = Pet::findOrFail($id);
         $pet->delete();
 
-        return redirect()->route('pet.listObj');
+        return redirect()->route('pet.show');
     }
 
 

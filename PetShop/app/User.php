@@ -75,19 +75,19 @@ class User extends Authenticatable
     }
 
 
-    private function getPassword()
+    public function getPassword()
     {
         return $this->attributes['password'];
     }
 
 
-    private function setPassword($password)
+    public function setPassword($password)
     {
         $this->attributes['password'] = $password;
     }
 
 
-    private function getEmail()
+    public function getEmail()
     {
         return $this->attributes['email'];
     }

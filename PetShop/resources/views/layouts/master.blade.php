@@ -37,11 +37,17 @@
 
                     <ul class="navbar-nav mr-auto">
                         <!-- Future Left Side Links -->
-                        <a class="navbar-brand" href="{{ ('/create') }}">
+                        <a class="navbar-brand" href="{{ route('pet.create') }}">
                             New pet
                         </a>
-                        <a class="navbar-brand" href="{{ ('/listObj') }}">
+                        <a class="navbar-brand" href="{{ route('pet.show') }}">
                             List pets
+                        </a>
+                        <a class="navbar-brand" href="{{ route('product.show') }}">
+                            Show products
+                        </a>
+                        <a class="navbar-brand" href="{{ route('product.create') }}">
+                            Create product
                         </a>
 
                     </ul>
