@@ -145,4 +145,10 @@ class User extends Authenticatable
     {
         $this->attributes['petList'] = $petList;
     }
+
+    
+    public function meeting()
+    {
+        return $this->belongsToMany(Meeting::class,'meeting_users');
+    }
 }
