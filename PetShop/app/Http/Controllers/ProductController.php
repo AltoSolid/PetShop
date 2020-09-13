@@ -32,7 +32,7 @@ class ProductController extends Controller
     {
         $request->validate([
             "name" => "required",
-            "category" => "required|in:Alimentación, Accesorios, Medicamentos",
+            "category" => "required|in:Feeding, Accessories, Medicines",
             "detail" => "required",
             "price" => "required|numeric|gt:0"
         ]);

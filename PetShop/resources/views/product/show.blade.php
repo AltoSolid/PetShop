@@ -10,7 +10,7 @@
                 
                 @foreach($data["product"] as $product)                
                    <!--<li>{{ $product->getId() }} - {{ $product->getName() }} - {{$product->getCategory()}}: {{ $product->getPrice() }} pesos</li>-->
-                    <a href="{{route('product.showId.id', $product->getId())}}"><li>{{$product->getId()}}  - {{ $product->getName() }} </li></a>          
+                    <a href="{{route('product.showInfo', $product->getId())}}"><li>{{$product->getId()}}  - {{ $product->getName() }} </li></a>          
                 @endforeach
 
 

@@ -25,7 +25,7 @@ class PetController extends Controller
 
         //$data["title"] = $pet->getPetName();
         $data["pets"] = $pet;
-        return view('pet.listObj')->with("data", $data);
+        return view('pet.show')->with("data", $data);
     }
 
 

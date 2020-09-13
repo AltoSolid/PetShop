@@ -3,6 +3,8 @@
 //Autor: Juan Felipe Londoño Gaviria
 namespace App;
 
+use App\Product;
+use App\Order;
 use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
@@ -34,6 +36,39 @@ class Item extends Model
         $this->attributes['subtotal'] = $subtotal;
     }
 
+
+   public function getProductId()
+    {
+        return $this->attributes['product_id'];
+    }
+
+
+    public function setProductId($id)
+    {
+        $this->attributes['product_id'] = $id;
+    }
+
+
+    public function getOrderId()
+    {
+        return $this->attributes['order_id'];
+    }
+
+
+    public function setOrderId($id)
+    {
+        $this->attributes['order_id'] = $id;
+    }
+
+
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
+
+
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 
 
 }
