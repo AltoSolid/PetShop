@@ -37,7 +37,7 @@ class OrderController extends Controller
         ]);
         Order::create($request->only(["orderDate", "price"]));
 
-        return back()->with('success','Se ha creado correctamente!');
+        return back()->with('success','The order has been created successfully!');
     }
 
 

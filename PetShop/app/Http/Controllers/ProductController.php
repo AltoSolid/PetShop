@@ -34,13 +34,13 @@ class ProductController extends Controller
     {
         $request->validate([
             "name" => "required",
-            "category" => "required|in:Feeding, Accessories, Medicines",
+            "category" => "required|in:Feeding,Accessories,Medicines",
             "detail" => "required",
             "price" => "required|numeric|gt:0"
         ]);
         Product::create($request->only(["name","category","detail","price"]));
 
-        return back()->with('success','Se ha creado correctamente!');
+        return back()->with('success','The product has been created successfully!');
     }
 
 

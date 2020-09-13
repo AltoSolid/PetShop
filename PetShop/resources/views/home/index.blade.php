@@ -6,15 +6,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Bienvenido a PetShop
+                    Welcome to the PetShop
                 </div>
                 <div class="buttons_container">
-                    <button class="btn button_form" type="button">
-                        <a href="{{ route('pet.create') }}">Create a form</a>
-                    </button>
-                    <button class="btn button_listObj" type="button">
-                        <a href="{{ route('pet.show') }}">List objects</a> 
-                </button>
+                    <center><img src="storage/logo.jpg" alt="Logo" class="css-class" alt="alt text">
                 </div>
             </div>
         </div>

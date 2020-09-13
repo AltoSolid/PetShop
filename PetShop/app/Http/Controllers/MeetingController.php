@@ -42,7 +42,7 @@ class MeetingController extends Controller
             "details" => "required"
             ]);
             Meeting::create($request->only(["place","date","details"]));
-            return back()->with('success','Item created successfully!');        
+            return back()->with('success','The meeting has been created successfully!');        
     }
 
 

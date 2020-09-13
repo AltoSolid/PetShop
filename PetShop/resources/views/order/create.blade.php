@@ -21,7 +21,9 @@
                 <form method="POST" action="{{ route('order.save') }}">
                     @csrf
                     <center>
-                    <br><input type="text" placeholder="orderDate" name="orderDate" value="{{ old('orderDate') }}" />
+                    
+                    <input type="text" autocomplete="off" placeholder="Enter date" class="date form-control" name="orderDate" value="{{ old('date') }}" />
+                    <br>                  
                     <br><input type="text" placeholder="price" name="price" value="{{ old('price') }}" />
 
                     <br><input type="submit" value="Send" /></center>

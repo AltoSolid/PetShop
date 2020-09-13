@@ -8,7 +8,7 @@ use App\Item;
 class Product extends Model
 {
     //attributes id, name, price, created_at, updated_at
-    protected $fillable = ['name','category','detail','price'];
+    protected $fillable = ['name', 'category', "detail", "price"];
 
 
     public function getId()
