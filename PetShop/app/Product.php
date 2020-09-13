@@ -53,7 +53,7 @@ class Product extends Model
     }
 
 
-    public function setDetail()
+    public function setDetail($detail)
     {
         $this->attributes['detail'] = $detail;
     }
@@ -71,4 +71,7 @@ class Product extends Model
     }
 
 
+    public function items(){
+        return $this->hasMany(Item::class);
+    }
 }
