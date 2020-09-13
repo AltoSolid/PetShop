@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Meeting extends Model
 {
+
     //attributes id, name, price, created_at, updated_at
     protected $fillable = ['place', 'date', 'details'];
+    protected $table = 'meetings';
     public function getId()
     {
         return $this->attributes['id'];
@@ -59,6 +61,6 @@ class Meeting extends Model
 
     public function user()
     {
-        return $this->belongsToMany('App\UserMeeting');
+        return $this->belongsToMany(User::class,'meeting_users');
     }
 }
