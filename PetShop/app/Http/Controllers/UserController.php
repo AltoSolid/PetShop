@@ -1,5 +1,6 @@
 <?php
 
+//Autor: Santiago Hincapie Murillo
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

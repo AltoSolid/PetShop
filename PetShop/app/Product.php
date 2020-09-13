@@ -1,5 +1,6 @@
 <?php
 
+//Autor: Juan Felipe Londoño Gaviria
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;

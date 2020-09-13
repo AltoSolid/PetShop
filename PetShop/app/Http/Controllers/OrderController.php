@@ -1,5 +1,6 @@
 <?php
 
+//Autor: Juan Felipe Londoño Gaviria
 namespace App\Http\Controllers;
 use App\Order;
 use Illuminate\Http\Request;
@@ -14,6 +15,7 @@ class OrderController extends Controller
         return view('order.show')->with("data",$data);
     }
 
+
     public function create()
     {
         $data = []; //to be sent to the view
@@ -24,7 +26,6 @@ class OrderController extends Controller
     }
 
 
-
     public function save(Request $request)
     {
         $request->validate([
@@ -32,7 +33,7 @@ class OrderController extends Controller
             "price" => "required|numeric|gt:0",
          
         ]);
-        Item::create($request->only(["orderDate", "price"]));
+        Order::create($request->only(["orderDate", "price"]));
 
         return back()->with('success','Se ha creado correctamente!');
     }

@@ -17,41 +17,43 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/index', 'HomeController@index')->name("home.index");
 
 Route::get('/contact', 'HomeController@contact')->name("home.contact");
 
-Route::get('/create', 'PetController@create')->name("pet.create");
 
-Route::get('/listObj', 'PetController@listObj')->name("pet.listObj");
+//PET
 
-Route::get('/petInfo/{id}', 'PetController@petInfo')->name("pet.petInfo");
+Route::get('/pet/create', 'PetController@create')->name("pet.create");
 
-Route::get('/delete/{id}', 'PetController@delete')->name("pet.delete");
+Route::get('/pet/show', 'PetController@show')->name("pet.show");
 
-Route::post('/save', 'PetController@save')->name("pet.save");
+Route::get('/pet/show/{id}', 'PetController@petInfo')->name("pet.petInfo");
 
+Route::get('/pet/delete/{id}', 'PetController@delete')->name("pet.delete");
+
+Route::post('/pet/save', 'PetController@save')->name("pet.save");
 
 
 //PRODUCT
 
 Route::get('/product/create', 'ProductController@create')->name("product.create");
 
-Route::get('/product/show', 'ProductController@listObj')->name("product.show");
+Route::get('/product/show', 'ProductController@show')->name("product.show");
 
-Route::get('/product/show/{id}', 'ProductController@petInfo')->name("product.showInfo");
+Route::get('/product/show/{id}', 'ProductController@showxId')->name("product.showInfo");
 
 Route::get('/product/delete/{id}', 'ProductController@delete')->name("product.delete");
 
 Route::post('/product/save', 'ProductController@save')->name("product.save");
 
+
 //ORDER
 
 Route::get('/order/create', 'OrderController@create')->name("order.create");
 
-Route::get('/order/show', 'OrderController@listObj')->name("order.show");
-
-Route::get('/order/show/{id}', 'OrderController@petInfo')->name("order.showInfo");
+Route::get('/order/show', 'OrderController@show')->name("order.show");
 
 Route::get('/order/delete/{id}', 'OrderController@delete')->name("order.delete");
 
