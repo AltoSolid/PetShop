@@ -107,7 +107,7 @@ class Pet extends Model
     }
 
 
-    public function user()
+    public function users()
     {
         return $this->belongsToMany('App\User');
     }

@@ -75,19 +75,19 @@ class User extends Authenticatable
     }
 
 
-    private function getPassword()
+    public function getPassword()
     {
         return $this->attributes['password'];
     }
 
 
-    private function setPassword($password)
+    public function setPassword($password)
     {
         $this->attributes['password'] = $password;
     }
 
 
-    private function getEmail()
+    public function getEmail()
     {
         return $this->attributes['email'];
     }
@@ -144,5 +144,11 @@ class User extends Authenticatable
     public function setPetList($petList)
     {
         $this->attributes['petList'] = $petList;
+    }
+
+    
+    public function meeting()
+    {
+        return $this->belongsToMany(Meeting::class,'meeting_users');
     }
 }

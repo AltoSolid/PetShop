@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ $data["title"] }}</div>
+                <div class="card-header">{{ $data["title"] }} Information:</div>
 
                 <div class="card-body">
                     <p class="info">Pet name: {{ $data["pets"]["petName"]}}</p>
@@ -20,7 +20,7 @@
                     <ul>
                     </ul>
                 </div>
-                <input type="submit" onclick="location='/listObj'" value="Return to all the Pets registered" class="btn button_form"/>
+                <input type="submit" onclick="location='/pet/show'" value="Return to all the Pets registered" class="btn button_form"/>
             </div>
         </div>
     </div>

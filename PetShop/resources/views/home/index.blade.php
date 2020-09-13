@@ -10,10 +10,10 @@
                 </div>
                 <div class="buttons_container">
                     <button class="btn button_form" type="button">
-                        <a href=" {{ ('/create') }}">Create a form</a>
+                        <a href="{{ route('pet.create') }}">Create a form</a>
                     </button>
                     <button class="btn button_listObj" type="button">
-                        <a href=" {{ ('/listObj') }}">List objects</a> 
+                        <a href="{{ route('pet.show') }}">List objects</a> 
                 </button>
                 </div>
             </div>

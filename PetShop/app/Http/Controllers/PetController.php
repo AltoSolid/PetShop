@@ -45,7 +45,7 @@ class PetController extends Controller
         $pet = Pet::findOrFail($id);
         $pet->delete();
 
-        return redirect()->route('pet.listObj');
+        return redirect()->route('pet.show');
     }
 
 

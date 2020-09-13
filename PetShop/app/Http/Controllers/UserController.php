@@ -8,17 +8,20 @@ use App\User;
 
 class UserController extends Controller
 {
-    public function changePassword()
+    public function changePassword($newPassword)
     {
+        $this->attributes['password'] = $newPassword;
     }
 
 
-    public function updateCreditCard()
+    public function updateCreditCard($newCreditCard)
     {
+        $this->attributes['creditCard'] = $newCreditCard;
     }
 
 
-    public function updateAddress()
+    public function updateAddress($newAddress)
     {
+        $this->attributes['address'] = $newAddress;
     }
 }
