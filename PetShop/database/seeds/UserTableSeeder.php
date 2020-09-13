@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Meeting;
+use App\User;
 
-class MeetingsTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class MeetingsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Meeting::class, 8)->create();
+        factory(User::class, 8)->create();
     }
 }

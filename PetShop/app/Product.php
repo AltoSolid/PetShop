@@ -47,7 +47,7 @@ class Product extends Model
     }
 
 
-    public function getDetail()
+    public function getDetail($detail)
     {
         return $this->attributes['detail'];
     }

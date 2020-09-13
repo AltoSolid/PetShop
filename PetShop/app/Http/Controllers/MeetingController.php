@@ -1,14 +1,15 @@
 <?php
 //Autor : Felipe Ríos López
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Meeting;
 class MeetingController extends Controller
 {
     public function showAll(){
         $data = []; //to be sent to the view
-        $data["title"] = "All meetings";
-        $data["meetings"] = Meeting::all()->sortBy("id");
+        $data["title"] = "All meeting";
+        $data["meeting"] = Meeting::all()->sortBy("id");
         return view('meeting.show')->with("data",$data);
     }
 

@@ -13,14 +13,10 @@ class CreateMeetingUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('meeting_users', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('meeting_id')->unsigned();
-            $table->bigInteger('user_id')->unsigned();
+        Schema::create('meeting_user', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('meeting_id')->constrained();
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('meeting_id')->references('id')->on('meetings')->onDelete('cascade');
-
         });
     }
 
@@ -31,6 +27,6 @@ class CreateMeetingUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meeting_users');
+        Schema::dropIfExists('meeting_user');
     }
 }
