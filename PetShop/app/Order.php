@@ -2,7 +2,7 @@
 
 //Autor: Juan Felipe Londoño Gaviria
 namespace App;
-
+use App\Item;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model

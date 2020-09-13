@@ -23,18 +23,6 @@ class Item extends Model
     }
 
 
-    public function getPrice()
-    {
-        return $this->attributes['subtotal'];
-    }
-
-
-    public function setPrice($subtotal)
-    {
-        $this->attributes['subtotal'] = $subtotal;
-    }
-
-
    public function getProductId()
     {
         return $this->attributes['product_id'];
