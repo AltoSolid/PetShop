@@ -15,7 +15,7 @@
                         <ul id="errors">
                             <b>Meeting details: {{ $data["meeting"]["details"] }} </b>
                             <br>
-                            Meeting date: {{ $data["meeting"]["date"]}}                         
+                            Meeting date: {{ $data["meeting"]["date"]}}
                             <br />
                             Creation: {{ $data["meeting"]["created_at"] }}
                         </ul>
@@ -23,8 +23,19 @@
                     <form method="GET" action="{{ route('meeting.destroy', $data['meeting']->getId())  }}">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" > Delete </button>
-                    </form> 
+                        <button type="submit"> Delete </button>
+                    </form>
+
+                </div>
+                <div>
+                    <H2>PARTICIPANTS</H2>
+                    @foreach($data["meetinguser"] as $mu)
+                    <div>
+                        @foreach($mu["users"] as $user)
+                        - {{ $user->name }}
+                    </div>
+                        @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -19,9 +19,9 @@ class MeetingController extends Controller
         $data = []; 
         $meeting = Meeting::findOrFail($id);
         
-        $data["title"]     = $meeting->getPlace();
-        $data["meeting"]   = $meeting;  
-
+        $data["title"]       = $meeting->getPlace();
+        $data["meeting"]     = $meeting;  
+        $data["meetinguser"] = Meeting::with('users')->get()->where('id',$id); //The pivot table, method users in MEETING  
         return view('meeting.showID')->with("data",$data);
     }
 
