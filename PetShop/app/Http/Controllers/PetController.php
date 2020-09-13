@@ -1,5 +1,6 @@
 <?php
 
+//Autor: Santiago Hincapie Murillo
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class PetController extends Controller
     }
 
 
-    public function listObj()
+    public function show()
     {
         $data = []; //to be sent to the view
 

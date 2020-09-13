@@ -1,10 +1,13 @@
 <?php
 
+//Autor: Juan Felipe Londoño Gaviria
 namespace App\Http\Controllers;
 use App\Item;
 use Illuminate\Http\Request;
 class ItemController extends Controller
 {
+
+
     public function show()
     {
         $data = []; //to be sent to the view
@@ -14,6 +17,7 @@ class ItemController extends Controller
         return view('item.show')->with("data",$data);
     }
 
+
     public function create()
     {
         $data = []; //to be sent to the view
@@ -22,7 +26,6 @@ class ItemController extends Controller
 
         return view('item.create')->with("data",$data);
     }
-
 
 
     public function save(Request $request)
