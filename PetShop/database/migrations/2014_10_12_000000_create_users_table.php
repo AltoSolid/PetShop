@@ -19,11 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('password');
             $table->string('email')->unique();
-            $table->integer('contact');
-            $table->integer('creditCard');
-            $table->integer('amount');
+            $table->bigInteger('contact');
+            $table->bigInteger('creditCard');
+            $table->bigInteger('amount');
             $table->string('petlist');
-            //$table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

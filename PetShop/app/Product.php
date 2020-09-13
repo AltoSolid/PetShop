@@ -47,13 +47,13 @@ class Product extends Model
     }
 
 
-    public function getDetail()
+    public function getDetail($detail)
     {
         return $this->attributes['detail'];
     }
 
 
-    public function setDetail()
+    public function setDetail($detail)
     {
         $this->attributes['detail'] = $detail;
     }

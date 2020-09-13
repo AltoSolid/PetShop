@@ -149,6 +149,6 @@ class User extends Authenticatable
     
     public function meeting()
     {
-        return $this->belongsToMany(Meeting::class,'meeting_users');
+        return $this->belongsToMany(Meeting::class,'meeting_user')->withTimestamps();
     }
 }

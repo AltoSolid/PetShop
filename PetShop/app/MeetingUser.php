@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Meeting extends Model
+class MeetingUser extends Model
 {
 
-    protected $table = "meeting_users";
+    protected $table = "meeting_user";
 
 
     public function getId()
@@ -25,36 +25,35 @@ class Meeting extends Model
     {
         return $this->attributes['meeting_id'];
     }
+
+
     public function setMeetingId($id)
     {
         $this->attributes['meeting_id'] = $id;
     }
+
+
     public function getUserId()
     {
         return $this->attributes['user_id'];
     }
+
+
     public function setUserId($id)
     {
         $this->attributes['user_id'] = $id;
     }
-    public function user()
+
+
+    public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id');
     }
+
+
     public function meeting()
     {
-        return $this->belongsTo(Meeting::class);
+        return $this->belongsTo(Meeting::class,'meeting_id');
     }
-    //public function user() 
-    //{
-    //   return $this->belongsToMany('App\User');
-    //}
-
-
-    //public function meeting()
-    //{
-    //   return $this->belongsToMany('App\Meeting');
-    //}
-
 
 }

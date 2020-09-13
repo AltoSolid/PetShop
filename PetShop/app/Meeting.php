@@ -9,7 +9,7 @@ class Meeting extends Model
 
     //attributes id, name, price, created_at, updated_at
     protected $fillable = ['place', 'date', 'details'];
-    protected $table = 'meetings';
+    protected $table = 'meeting';
     public function getId()
     {
         return $this->attributes['id'];
@@ -59,8 +59,8 @@ class Meeting extends Model
     }
 
 
-    public function user()
+    public function users()
     {
-        return $this->belongsToMany(User::class,'meeting_users');
+        return $this->belongsToMany(User::class,'meeting_user')->withTimestamps();
     }
 }
