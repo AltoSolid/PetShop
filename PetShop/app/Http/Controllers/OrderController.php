@@ -2,7 +2,9 @@
 
 //Autor: Juan Felipe Londoño Gaviria
 namespace App\Http\Controllers;
+use App\Product;
 use App\Order;
+use App\Item;
 use Illuminate\Http\Request;
 class OrderController extends Controller
 {

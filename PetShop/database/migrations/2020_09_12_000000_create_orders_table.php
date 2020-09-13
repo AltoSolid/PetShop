@@ -19,8 +19,6 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->date('orderDate');
             $table->integer('price');
-            // $table->unsignedBigInteger('item_id');
-            // $table->foreign('item_id')->references('id')->on('items');
             $table->timestamps();
         });
     }
