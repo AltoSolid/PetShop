@@ -21,7 +21,6 @@ use Illuminate\Support\Str;
 $factory->define(Item::class, function (Faker $faker) {
     return [
         'quantity' => $faker->numberBetween($min = 1, $max = 1000),
-        'subtotal' => $faker->numberBetween($min = 200, $max = 20000000),
         'order_id' => 'factory:App\Order',
         'product_id' => 'factory:App\Product',
     ];

@@ -62,7 +62,7 @@ class PetController extends Controller
         ]);
         Pet::create($request->only(["petName", "typeAnimal", "typeAnimal", "medicalHistory", "raceAnimal", "available", "genre", "age"]));
 
-        return back()->with('success', 'Item created successfully!');
+        return back()->with('success', 'Pet has been created successfully!');
     }
 
     

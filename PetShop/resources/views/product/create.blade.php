@@ -22,9 +22,18 @@
                     @csrf
                     <center>
                     <br><input type="text" placeholder="Name" name="name" value="{{ old('name') }}" />
-                    <br><input type="text" placeholder="Category" name="category" value="{{ old('category') }}" />
+                    <br>
+                    <br><label for="category">Choose a category:</label>
+                    <select id="category" name="category">
+                        <option value="Feeding">Feeding</option>
+                        <option value="Medicines">Medicines</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                    <br>
                     <br><input type="text" placeholder="Details" name="detail" value="{{ old('detail') }}" />
+                    <br>
                     <br><input type="text" placeholder="Price" name="price" value="{{ old('price') }}" />
+                    <br>
                     <br><input type="submit" value="Send" /></center>
                 </form>
 

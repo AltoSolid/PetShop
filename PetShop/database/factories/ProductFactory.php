@@ -24,8 +24,6 @@ $factory->define(Product::class, function (Faker $faker) {
         'category' => $faker->randomElement(['Alimentación', 'Accesorios', 'Juguetes', 'Medicamentos']),
         'detail' => $faker->detail,
         'price'=> $faker->numberBetween($min = 200, $max = 1900000),
-        'image'=> $faker->image('public/storage/images', 640,480),
-        'item_id' => 'factory:App\Item',
     ];
 });
     

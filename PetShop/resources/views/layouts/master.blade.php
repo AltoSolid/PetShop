@@ -23,10 +23,6 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home.index') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,32 +33,38 @@
 
                     <ul class="navbar-nav mr-auto">
                         <!-- Future Left Side Links -->
-                        <a class="navbar-brand" href="{{ route('pet.create') }}">
-                            New pet
-                        </a>
-                        <a class="navbar-brand" href="{{ route('pet.show') }}">
-                            List pets
-                        </a>
-                        <a class="navbar-brand" href="{{ route('product.show') }}">
-                            Show products
-                        </a>
-                        <a class="navbar-brand" href="{{ route('product.create') }}">
-                            Create product
-                        </a>
 
-                    </ul>
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Future authentication Links -->
-                        <a class="navbar-brand" href="{{ route('meeting.show') }}">
+                        <div class="navbar">
+                            <a class="navbar-brand" href="{{ route('home.index') }}">Home</a>
+                            
+                            <a class="navbar-brand" href="{{ route('pet.show') }}">
+                            Show pets
+                            </a>
+
+                            <a class="navbar-brand" href="{{ route('pet.create') }}">
+                            New pet
+                            </a>
+                            
+                            <a class="navbar-brand" href="{{ route('product.show') }}">
+                            Show products
+                            </a>
+                        
+                            <a class="navbar-brand" href="{{ route('product.create') }}">
+                            Create product
+                            </a>
+
+                            <a class="navbar-brand" href="{{ route('meeting.show') }}">
                             Show meetings
-                        </a>
-                        <a class="navbar-brand" href="{{ route('meeting.create') }}">
+                            </a>
+                        
+                            <a class="navbar-brand" href="{{ route('meeting.create') }}">
                             Create meeting
-                        </a>
-                        <a class="navbar-brand" href="{{('/contact') }}">
+                            </a>
+
+                            <a class="navbar-brand" href="{{route('home.contact') }}">
                             Contact
-                        </a>                        
+                            </a>    
+                       </div>                
                     </ul>
                 </div>
             </div>
