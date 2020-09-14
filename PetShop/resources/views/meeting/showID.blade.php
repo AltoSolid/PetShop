@@ -18,6 +18,8 @@
                             Meeting date: {{ $data["meeting"]["date"]}}
                             <br />
                             Creation: {{ $data["meeting"]["created_at"] }}
+                            <br />
+                            Image of meeting place: {{ $data["meeting"]["image"] }}
                         </ul>
                     </div>
                     <form method="GET" action="{{ route('meeting.destroy', $data['meeting']->getId())  }}">

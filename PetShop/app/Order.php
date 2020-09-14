@@ -2,7 +2,7 @@
 
 //Autor: Juan Felipe Londoño Gaviria and Felipe Ríos López
 namespace App;
-use App\Item;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
@@ -42,7 +42,6 @@ class Order extends Model
         $this->attributes['price'] = $price;
     }
 
-
     public function items(){
         return $this->hasMany(Item::class);
     }
@@ -50,4 +49,5 @@ class Order extends Model
     public function payment(){
         return $this->hasOne(Payment::class);
     }    
+
 }

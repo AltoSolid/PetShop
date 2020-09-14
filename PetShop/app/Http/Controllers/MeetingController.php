@@ -41,9 +41,10 @@ class MeetingController extends Controller
         $request->validate([
             "place" => "required",        
             "date" => "required|date",    
-            "details" => "required"
+            "details" => "required",
+            "image" => "required"
             ]);
-            Meeting::create($request->only(["place","date","details"]));
+            Meeting::create($request->only(["place","date","details","image"]));
             return back()->with('success','The meeting has been created successfully!');        
     }
 

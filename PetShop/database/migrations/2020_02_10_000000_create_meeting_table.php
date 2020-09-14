@@ -18,6 +18,7 @@ class CreateMeetingTable extends Migration
             $table->text('place');
             $table->date('date');
             $table->text('details');
+            $table->mediumText('image')->nullable();
             $table->timestamps();
         });
     }
