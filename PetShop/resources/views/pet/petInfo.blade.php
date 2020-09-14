@@ -7,20 +7,20 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ $data["title"] }} Information:</div>
+                <div class="card-header">{{ $data["title"] }} {{__('information.pet.petInfo.information')}}</div>
 
                 <div class="card-body">
-                    <p class="info">Pet name: {{ $data["pets"]["petName"]}}</p>
-                    <p class="info">type of Animal: {{ $data["pets"]["typeAnimal"]}}</p>
-                    <p class="info">Medical History: {{ $data["pets"]["medicalHistory"]}}</p>
-                    <p class="info">Race of Animal: {{ $data["pets"]["raceAnimal"]}}</p>
-                    <p class="info">Available to adopt?: {{ $data["pets"]["available"]}}</p>
-                    <p class="info">Genre: {{ $data["pets"]["genre"]}}</p>
-                    <p class="info">Age: {{ $data["pets"]["age"]}}</p>
+                    <p class="info">{{__('information.pet.petInfo.petName')}} {{ $data["pets"]["petName"]}}</p>
+                    <p class="info">{{__('information.pet.petInfo.typeAnimal')}} {{ $data["pets"]["typeAnimal"]}}</p>
+                    <p class="info">{{__('information.pet.petInfo.medicalHistory')}} {{ $data["pets"]["medicalHistory"]}}</p>
+                    <p class="info">{{__('information.pet.petInfo.raceAnimal')}} {{ $data["pets"]["raceAnimal"]}}</p>
+                    <p class="info">{{__('information.pet.petInfo.available')}} {{ $data["pets"]["available"]}}</p>
+                    <p class="info">{{__('information.pet.petInfo.genre')}} {{ $data["pets"]["genre"]}}</p>
+                    <p class="info">{{__('information.pet.petInfo.age')}} {{ $data["pets"]["age"]}}</p>
                     <ul>
                     </ul>
                 </div>
-                <input type="submit" onclick="location='/pet/show'" value="Return to all the Pets registered" class="btn button_form"/>
+                <input type="submit" onclick="location='/pet/show'" value="{{__('information.pet.petInfo.backButton')}}" class="btn button_form"/>
             </div>
         </div>
     </div>

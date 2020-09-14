@@ -7,20 +7,20 @@
         <div class="col-md-8">
         @include('util.message')
             <div class="card">
-                <div class="card-header">Pet Information</div>
+                <div class="card-header">{{__('information.pet.createPet.petTitle')}}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('pet.save') }}">
                         @csrf
-                        <p class="info"> Please fill all the information below: <br></p>
+                        <p class="info"> {{__('information.pet.createPet.petPetition')}} <br></p>
                         <input type="text" placeholder="Pet name" name="petName" value="{{ old('petName') }}" class="form" />
                         <input type="text" placeholder="type of animal" name="typeAnimal" value="{{ old('typeAnimal') }}" class="form" /> <br>
                         <input type="text" placeholder="Medical History" name="medicalHistory" value="{{ old('medicalHistory') }}" class="form" />
                         <input type="text" placeholder="Race of the animal" name="raceAnimal" value="{{ old('raceAnimal') }}" class="form" />
 
-                        <p class="info">Avaibale to adopt?</p>
+                        <p class="info">{{__('information.pet.createPet.petAdopt')}}</p>
                         <input type="text" placeholder="Yes or No" name="available" value="{{ old('available') }}" class="form" />
 
-                        <p class="info">Genre</p>
+                        <p class="info">{{__('information.pet.createPet.petGenre')}}</p>
                         <input type="text" placeholder="Male or female" name="genre" value="{{ old('genre') }}" class="form" />
                         <input type="text" placeholder="Age (in years)" name="age" value="{{ old('age') }}" class="form" />
                         <hr>

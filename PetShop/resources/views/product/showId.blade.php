@@ -10,13 +10,16 @@
                 <div class="card-header">{{ $data["product"]["name"] }}</div>
 
                 <div class="card-body">
-                    <b>Name:</b> {{ $data["product"]["name"] }}<br />
-                    <b>Category:</b> {{ $data["product"]["category"] }}<br />
-                    <b>Details:</b> {{ $data["product"]["detail"] }}<br />
-                    <b>Price:</b> {{ $data["product"]["price"] }}  pesos<br /><br />
+                    <b>{{__('information.product.showId.name')}}</b> {{ $data["product"]["name"] }}<br />
+                    <b>{{__('information.product.showId.category')}}</b> {{ $data["product"]["category"] }}<br />
+                    <b>{{__('information.product.showId.details')}}</b> {{ $data["product"]["detail"] }}<br />
+                    <b>{{__('information.product.showId.price')}}</b> {{ $data["product"]["price"] }} pesos<br /><br />
                     <br>
                     <br>
-                    <center><a href="{{route('product.show')}}">BACK</a><br><a href="{{route('product.delete', $data["product"]->getId())}}" >DELETE</a></center>
+                    <center><a href="{{route('product.show')}}">{{__('information.product.showId.backButton')}}</a><br>
+                        <a href="{{route('product.delete', $data["product"]->getId())}}">
+                            {{__('information.product.showId.deleteButton')}}
+                        </a></center>
                 </div>
             </div>
         </div>

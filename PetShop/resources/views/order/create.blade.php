@@ -8,7 +8,7 @@
         <div class="col-md-8">
             @include('util.message')
             <div class="card">
-                <div class="card-header">Create Order</div>
+                <div class="card-header">{{__('information.order.create')}}</div>
                 <div class="card-body">
                 @if($errors->any())
                 <ul id="errors">

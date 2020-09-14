@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Welcome to the PetShop
+                    {{__('information.indexWelcome')}}
                 </div>
                 <div class="buttons_container">
                     <center><img src="storage/logo.jpg" alt="Logo" class="css-class" alt="alt text">
