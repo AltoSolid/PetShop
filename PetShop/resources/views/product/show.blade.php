@@ -3,6 +3,7 @@
 @section("title", $data["title"])
 
 @section('content')
+
 <div class="container">
     <div class="column">
         <a  href="{{ route('product.removeCart') }}">

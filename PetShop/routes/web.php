@@ -54,6 +54,8 @@ Route::get('/cart/removeCart', 'ProductController@removeCart')->name("product.re
 
 Route::get('/cart/showCart', 'ProductController@showCart')->name("product.showCart");
 
+Route::post('/cart/buy', 'ProductController@buy')->name("product.buy");
+
 //ORDER
 
 Route::get('/order/create', 'OrderController@create')->name("order.create");
