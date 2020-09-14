@@ -22,6 +22,7 @@ class CreatePetsTable extends Migration
             $table->text('available');
             $table->text('genre');
             $table->integer('age');
+            $table->mediumText('image')->nullable();
             $table->timestamps();
         });
     }

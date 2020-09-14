@@ -58,9 +58,10 @@ class PetController extends Controller
             "raceAnimal" => "required",
             "available" => "required",
             "genre" => "required",
-            "age" => "required|numeric"
+            "age" => "required|numeric",
+            "image" => "required"
         ]);
-        Pet::create($request->only(["petName", "typeAnimal", "typeAnimal", "medicalHistory", "raceAnimal", "available", "genre", "age"]));
+        Pet::create($request->only(["petName", "typeAnimal", "typeAnimal", "medicalHistory", "raceAnimal", "available", "genre", "age","image"]));
 
         return back()->with('success', 'Pet has been created successfully!');
     }

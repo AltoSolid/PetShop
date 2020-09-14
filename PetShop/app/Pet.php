@@ -9,7 +9,7 @@ class Pet extends Model
 {
     //Atributes id, petname, typeAnimal, medicalHistory, raceAnimal, available, genre, age
 
-    protected $fillable = ['petName', 'typeAnimal', "medicalHistory", "raceAnimal", "available", "genre", "age"];
+    protected $fillable = ['petName', 'typeAnimal', "medicalHistory", "raceAnimal", "available", "genre", "age", "image"];
 
     public function getId()
     {
@@ -106,6 +106,15 @@ class Pet extends Model
         $this->attributes['age'] = $age;
     }
 
+    public function getImage()
+    {
+        return $this->attributes['age'];
+    }
+
+    public function setImage($image)
+    {
+        $this->attributes['image'] = $image;
+    }
 
     public function users()
     {

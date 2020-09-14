@@ -24,7 +24,10 @@
                         <input type="text" placeholder="Male or female" name="genre" value="{{ old('genre') }}" class="form" />
                         <input type="text" placeholder="Age (in years)" name="age" value="{{ old('age') }}" class="form" />
                         <hr>
-                        <input type="submit" value="Send" class="btn button_form" />
+                        <p class="info">Choose a photo</p>
+                        <input type="file" placeholder="image" name="image" value="{{ old('image') }}" class="form" />
+                        <hr>
+                        <input type="submit" value="Send" class="btn button_form" /> 
                     </form>
                     <br>
                     <input type="submit" onclick="location='/index'" value="Return" class="btn button_form"/>

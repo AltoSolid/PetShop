@@ -8,7 +8,7 @@ class Meeting extends Model
 {
 
     //attributes id, name, price, created_at, updated_at
-    protected $fillable = ['place', 'date', 'details'];
+    protected $fillable = ['place', 'date', 'details', 'image'];
     protected $table = 'meeting';
     public function getId()
     {
@@ -58,6 +58,15 @@ class Meeting extends Model
         $this->attributes['details'] = $details;
     }
 
+    public function getImage()
+    {
+        return $this->attributes['age'];
+    }
+
+    public function setImage($image)
+    {
+        $this->attributes['image'] = $image;
+    }
 
     public function users()
     {
