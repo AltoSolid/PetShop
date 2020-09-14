@@ -4,7 +4,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Item;
+
 class Product extends Model
 {
     //attributes id, name, price, created_at, updated_at
@@ -70,8 +70,11 @@ class Product extends Model
         $this->attributes['price'] = $price;
     }
 
-
-    public function items(){
-        return $this->hasMany(Item::class);
+    public function orders()
+    {
+        return $this->belongsToMany(Product::class, 'orders_products',
+         'products_id', 'orders_id')
+         ->withTimestamps()
+         ->withPivot(['quantity']);
     }
 }
