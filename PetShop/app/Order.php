@@ -1,6 +1,6 @@
 <?php
 
-//Autor: Juan Felipe Londoño Gaviria
+//Autor: Juan Felipe Londoño Gaviria and Felipe Ríos López
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
@@ -9,6 +9,14 @@ class Order extends Model
 {
 
     protected $fillable = ['orderDate','price'];
+
+    public function getId(){
+        return $this->attributes['id'];
+    }
+
+    public function setId($id){
+        $this->attributes['id']= $id;
+    }
 
 
     public function getOrderDate()
@@ -33,5 +41,13 @@ class Order extends Model
     {
         $this->attributes['price'] = $price;
     }
+
+    public function items(){
+        return $this->hasMany(Item::class);
+    }
+
+    public function payment(){
+        return $this->hasOne(Payment::class);
+    }    
 
 }
