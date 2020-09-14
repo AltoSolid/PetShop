@@ -8,7 +8,7 @@
         <div class="col-md-8">
             @include('util.message')
             <div class="card">
-                <div class="card-header">Create Product</div>
+                <div class="card-header">{{__('information.product.createProduct.title')}}</div>
                 <div class="card-body">
                 @if($errors->any())
                 <ul id="errors">
@@ -23,18 +23,18 @@
                     <center>
                     <br><input type="text" placeholder="Name" name="name" value="{{ old('name') }}" />
                     <br>
-                    <br><label for="category">Choose a category:</label>
+                    <br><label for="category">{{__('information.product.createProduct.chooseCategory')}}</label>
                     <select id="category" name="category">
-                        <option value="Feeding">Feeding</option>
-                        <option value="Medicines">Medicines</option>
-                        <option value="Accessories">Accessories</option>
+                        <option value="Feeding">{{__('information.product.createProduct.feeding')}}</option>
+                        <option value="Medicines">{{__('information.product.createProduct.medicines')}}</option>
+                        <option value="Accessories">{{__('information.product.createProduct.accesories')}}</option>
                     </select>
                     <br>
                     <br><input type="text" placeholder="Details" name="detail" value="{{ old('detail') }}" />
                     <br>
                     <br><input type="text" placeholder="Price" name="price" value="{{ old('price') }}" />
                     <br>
-                    <br><input type="submit" value="Send" /></center>
+                    <br><input type="submit" value="Send" class="btn button_form"/></center>
                 </form>
 
                 </div>

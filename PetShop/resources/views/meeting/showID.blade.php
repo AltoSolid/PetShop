@@ -23,12 +23,12 @@
                     <form method="GET" action="{{ route('meeting.destroy', $data['meeting']->getId())  }}">
                         @csrf
                         @method('DELETE')
-                        <button type="submit"> Delete </button>
+                        <button type="submit"> {{__('information.meeting.showId.buttonDelete')}} </button>
                     </form>
 
                 </div>
                 <div>
-                    <H2>PARTICIPANTS</H2>
+                    <H2>{{__('information.meeting.showId.participants')}}</H2>
                     @foreach($data["meetinguser"] as $mu)
                     <div>
                         @foreach($mu["users"] as $user)

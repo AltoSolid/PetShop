@@ -36,7 +36,10 @@
 
 
                     </div>
-                    <center><a href="{{route('product.show')}}">BACK</a><br><a href="{{route('product.delete', $data["product"]->getId())}}">DELETE</a></center>
+                     <center><a href="{{route('product.show')}}">{{__('information.product.showId.backButton')}}</a><br>
+                        <a href="{{route('product.delete', $data["product"]->getId())}}">
+                            {{__('information.product.showId.deleteButton')}}
+                        </a></center>
                 </div>
             </div>
         </div>

@@ -16,14 +16,14 @@
                             @foreach($data["meeting"] as $meeting)
 
                             @if($loop->iteration<=2) <b><a href="{{ route('meeting.showID', $meeting->getId()) }}">
-                                    <li> {{ $meeting->getId() }} - {{ $meeting->getPlace() }} , Fecha de reunión: {{ $meeting->getDate() }}</li>
+                                    <li> {{ $meeting->getId() }} {{__('information.meeting.show.separator')}} {{ $meeting->getPlace() }} {{__('information.meeting.show.date')}} {{ $meeting->getDate() }}</li>
                                 </a></b>
                                 @else
                                 <a href="{{ route('meeting.showID', $meeting->getId()) }}">
-                                    <li> {{ $meeting->getId() }} - {{ $meeting->getPlace() }} , Fecha de reunión: {{ $meeting->getDate() }}</li>
+                                    <li> {{ $meeting->getId() }} {{__('information.meeting.show.separator')}} {{ $meeting->getPlace() }} {{__('information.meeting.show.date')}} {{ $meeting->getDate() }}</li>
                                 </a>
                                 @endif
-                                <b>Details:</b><br />
+                                <b>{{__('information.meeting.show.details')}}</b><br />
                                 {{ $meeting->getDetails() }}<br />
                                 <br />
                                 @endforeach

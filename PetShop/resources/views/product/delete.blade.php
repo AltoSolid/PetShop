@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <br>
             <br>
-            <center><font face="Verdana" color="lightblue" size="20px">It has been removed successfully!</font></center>
+            <center><font face="Verdana" color="lightblue" size="20px">{{__('information.product.delete')}}</font></center>
             
         </div>
     </div>

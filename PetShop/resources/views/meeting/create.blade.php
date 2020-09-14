@@ -9,7 +9,7 @@
         <div class="col-md-8">
             @include('util.message')
             <div class="card">
-                <div class="card-header">Create meeting</div>
+                <div class="card-header">{{__('information.meeting.create.title')}}</div>
                 <div class="card-body">
                     @if($errors->any())
                     <ul id="errors">
@@ -33,7 +33,7 @@
                             <input type="text" placeholder="Meeting details" name="details" value="{{ old('details') }}" />
                         </div>
 
-                        <input type="submit" value="Send" />
+                        <input type="submit" value="Send" class="btn button_form"/>
                     </form>
 
                 </div>

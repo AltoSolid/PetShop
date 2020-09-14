@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>@yield('title','Home Page PetShop')</title>
+    <title>@yield('title',__('information.homePage'))</title>
 
     <!-- Styles -->
 
@@ -38,31 +38,31 @@
                             <a class="navbar-brand" href="{{ route('home.index') }}">Home</a>
                             
                             <a class="navbar-brand" href="{{ route('pet.show') }}">
-                            Show pets
+                            {{__('information.master.navBarButtons.showPets')}}
                             </a>
 
                             <a class="navbar-brand" href="{{ route('pet.create') }}">
-                            New pet
+                            {{__('information.master.navBarButtons.newPet')}}
                             </a>
                             
                             <a class="navbar-brand" href="{{ route('product.show') }}">
-                            Show products
+                            {{__('information.master.navBarButtons.showProducts')}}
                             </a>
                         
                             <a class="navbar-brand" href="{{ route('product.create') }}">
-                            Create product
+                            {{__('information.master.navBarButtons.createProduct')}}
                             </a>
 
                             <a class="navbar-brand" href="{{ route('meeting.show') }}">
-                            Show meetings
+                            {{__('information.master.navBarButtons.showMeetings')}}
                             </a>
                         
                             <a class="navbar-brand" href="{{ route('meeting.create') }}">
-                            Create meeting
+                            {{__('information.master.navBarButtons.createMeetings')}}
                             </a>
 
                             <a class="navbar-brand" href="{{route('home.contact') }}">
-                            Contact
+                            {{__('information.master.navBarButtons.contact')}}
                             </a>    
                        </div>                
                     </ul>
