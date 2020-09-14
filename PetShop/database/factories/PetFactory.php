@@ -18,8 +18,13 @@ use Illuminate\Support\Str;
 
 $factory->define(Pet::class, function (Faker $faker) {
     return [
-        'petName' => $faker->state,
-        'typeAnimal' => $faker->dateTimeBetween('2020-09-06', '2022-12-31'),
-        'details' => $faker->randomElement(['Not assistants yet','There is more than 100 people','Dance meeting from 8pm every sunday']) 
+        'petName' => $faker->randomElement(['Tobby', 'max', 'purple']),
+        'typeAnimal' => $faker->randomElement(['Dog', 'cat', 'turtle','bird']),
+        'medicalHistory' => $faker->randomElement(['Cancer','Health','Dislexia']),
+        "raceAnimal" => $faker->randomElement(["Affenpinscher","Airedale Terrier"]),
+        "available" => $faker->randomElement(['Yes', 'No']),
+        "genre" => $faker->randomElement(['Male', 'Female']),
+        "age" => $faker->numberBetween($min = 1, $max = 50),
+        'image' => $faker->image('public/storage/images',640,480, null, false),
     ];
 });
