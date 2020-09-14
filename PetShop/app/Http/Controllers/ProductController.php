@@ -62,5 +62,33 @@ class ProductController extends Controller
         return redirect()->route('product.show');
 
     }
+    public function addToCart($id, Request $request)
+    {
+        //$quantity = $request->session()->get("products");
+        //dd($quantity);   //To see how do it get the quantity     
+        $data = []; //to be sent to the view
+        //$data["title"] = "Cart";
+        $quantity = $request->quantity;
+        $products = $request->session()->get("products");
+        $products[$id] = $quantity;  
+        $request->session()->put('products',$products); 
+        return back();
+    }
 
+    public function removeCart(Request $request)
+    {
+        $request->session()->forget('products');
+        return redirect()->route('product.show');
+    }
+
+    public function showCart(Request $request)
+    {
+        $products = $request->session()->get('products');
+        if ($products) {
+            dd($products);
+        }
+        //$keys= array_keys($products);
+        //dd($keys);
+    }
+    
 }
