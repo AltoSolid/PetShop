@@ -104,9 +104,7 @@ class ProductController extends Controller
     public function buy(Request $request)
     {
         $order = new Order();
-        $order->setPrice("0");
-        $order->setOrderDate("2020-02-12");
-        $order->save();
+
         $totalPrice = 0;
         $products = $request->session()->get("products");
         if ($products) {
@@ -118,8 +116,21 @@ class ProductController extends Controller
                 $item->setOrderId($keys[$i]);
                 $item->save();
                 $actualProduct = Product::find($keys[$i]);
-                $totalPrice = $totalPrice + $actualProduct->getPrice()*$products[$keys[$i]];
+                $totalPrice = $totalPrice + $actualProduct->getPrice() * $products[$keys[$i]];
             }
+            $order->setOrderDate(now());
+            $order->setPrice($totalPrice);
+            $order->save();
+
+            $request->session()->forget('products');
+            return redirect()->route('product.show');
         }
+    }
+
+
+    public function payment(Request $request)
+    {
+            return redirect()->route('payment.buy');
+    
     }
 }

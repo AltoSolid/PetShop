@@ -1,6 +1,6 @@
 <?php
 
-//Autor: Juan Felipe Londoño Gaviria
+//Autor: Juan Felipe Londoño Gaviria and Felipe Ríos López
 namespace App;
 use App\Item;
 use Illuminate\Database\Eloquent\Model;
@@ -46,4 +46,8 @@ class Order extends Model
     public function items(){
         return $this->hasMany(Item::class);
     }
+
+    public function payment(){
+        return $this->hasOne(Payment::class);
+    }    
 }

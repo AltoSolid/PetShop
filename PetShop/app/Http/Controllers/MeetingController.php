@@ -1,4 +1,5 @@
 <?php
+
 //Autor : Felipe Ríos López
 namespace App\Http\Controllers;
 
