@@ -11,6 +11,11 @@ return [
         "vision" => "What is our Vision?"
     ],
 
+    "email" =>[
+        "title" => "TITLE",
+        "body" => "BODY",
+    ],
+
     "indexWelcome" => "Welcome to our Petshop",
 
     "contactInformation" => [
@@ -18,7 +23,7 @@ return [
         "contactName" => "Contact name: Martin",
         "petshopAddress" => "Petshop's Address: P.Sherman,calle Wallaby 42, Sydney",
         "petshopPhone" => "Petshop's Phone: 1234567890",
-        "contactEmail" => "Contact email: petshop@shop.com",
+        "contactEmail" => "Contact email: virtualpetshopmail@gmail.com",
         "publicity" => [
             "panfleto" => "Want a beautiful panfleto?",
             "intro" => "Petshop is not just a store, it is a world in which masters and pets can share moments of happiness with others.",
