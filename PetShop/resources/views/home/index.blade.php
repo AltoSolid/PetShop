@@ -8,7 +8,13 @@
                 <div class="card-header">
                     {{__('information.indexWelcome')}}
                 </div>
-                <div class="buttons_container">
+                
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     <center><img src="storage/logo.jpg" alt="Logo" class="css-class" alt="alt text">
                 </div>
             </div>

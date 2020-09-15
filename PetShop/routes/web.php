@@ -87,3 +87,6 @@ Route::get('/meeting/destroy/{id}', 'MeetingController@destroy')->name("meeting.
 //IMAGES
 Route::get('/image/index', 'ImageController@index')->name("image.index");
 Route::post('/image/save', 'ImageController@save')->name("image.save");
+Auth::routes();
+
+

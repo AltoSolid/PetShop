@@ -31,40 +31,71 @@
 
                     <!-- Left Side Of Navbar -->
 
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <ul class="navbar-nav mr-auto">
                         <!-- Future Left Side Links -->
 
-                        <div class="navbar">
-                            <a class="navbar-brand" href="{{ route('home.index') }}">Home</a>
+                                <div class="navbar">
+                                    <a class="navbar-brand" href="{{ route('home.index') }}">Home</a>
                             
-                            <a class="navbar-brand" href="{{ route('pet.show') }}">
-                            {{__('information.master.navBarButtons.showPets')}}
-                            </a>
+                                     <a class="navbar-brand" href="{{ route('pet.show') }}">
+                                    {{__('information.master.navBarButtons.showPets')}}
+                                    </a>
 
-                            <a class="navbar-brand" href="{{ route('pet.create') }}">
-                            {{__('information.master.navBarButtons.newPet')}}
-                            </a>
-                            
-                            <a class="navbar-brand" href="{{ route('product.show') }}">
-                            {{__('information.master.navBarButtons.showProducts')}}
-                            </a>
-                        
-                            <a class="navbar-brand" href="{{ route('product.create') }}">
-                            {{__('information.master.navBarButtons.createProduct')}}
-                            </a>
+                                    <a class="navbar-brand" href="{{ route('pet.create') }}">
+                                    {{__('information.master.navBarButtons.newPet')}}
+                                    </a>
+                                    
+                                    <a class="navbar-brand" href="{{ route('product.show') }}">
+                                    {{__('information.master.navBarButtons.showProducts')}}
+                                    </a>
+                                
+                                    <a class="navbar-brand" href="{{ route('product.create') }}">
+                                    {{__('information.master.navBarButtons.createProduct')}}
+                                    </a>
 
-                            <a class="navbar-brand" href="{{ route('meeting.show') }}">
-                            {{__('information.master.navBarButtons.showMeetings')}}
-                            </a>
-                        
-                            <a class="navbar-brand" href="{{ route('meeting.create') }}">
-                            {{__('information.master.navBarButtons.createMeetings')}}
-                            </a>
+                                    <a class="navbar-brand" href="{{ route('meeting.show') }}">
+                                    {{__('information.master.navBarButtons.showMeetings')}}
+                                    </a>
+                                
+                                    <a class="navbar-brand" href="{{ route('meeting.create') }}">
+                                    {{__('information.master.navBarButtons.createMeetings')}}
+                                    </a>
 
-                            <a class="navbar-brand" href="{{route('home.contact') }}">
-                            {{__('information.master.navBarButtons.contact')}}
-                            </a>    
-                       </div>                
+                                    <a class="navbar-brand" href="{{route('home.contact') }}">
+                                    {{__('information.master.navBarButtons.contact')}}
+                                    </a>    
+                                </div>                
+                            </ul>
+                            <li class="nav-item">
+                                
+                                {{ Auth::user()->name }}
+                                
+
+                                <div class="nav-item">
+                                    <a class="nav-link" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
                 </div>
             </div>

@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'address', 'password', 'email', 'contact', 'creditCard', 'amount',
+        'name', 'email', 'address', 'password', 'contact', 'creditCard', 'amount',
         'petList'
     ];
 
@@ -63,6 +63,19 @@ class User extends Authenticatable
     }
 
 
+    public function getEmail()
+    {
+        return $this->attributes['email'];
+    }
+
+
+    private function setEmail($email)
+    {
+        $this->attributes['email'] = $email;
+    }
+
+
+
     public function getAddress()
     {
         return $this->attributes['address'];
@@ -84,18 +97,6 @@ class User extends Authenticatable
     public function setPassword($password)
     {
         $this->attributes['password'] = $password;
-    }
-
-
-    public function getEmail()
-    {
-        return $this->attributes['email'];
-    }
-
-
-    private function setEmail($email)
-    {
-        $this->attributes['email'] = $email;
     }
 
 
