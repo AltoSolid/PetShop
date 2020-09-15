@@ -12,7 +12,7 @@ class MailController extends Controller
             'title' => "TITLE",
             'body' => "BODY",
         ];
-        
-        Mail::to('friosl@eafit.edu.co')->send(new Email($data));
+
+        Mail::to('virtualpetshopmail@gmail.com')->send(new Email($data));
     }
 }
