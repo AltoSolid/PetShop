@@ -13,7 +13,7 @@
                 - Quantity: {{ Session::get('products')[$product->getId()] }} </li>
             @endforeach
             PRECIO Total
-            <form action="{{ route('product.buy') }}" method="POST">
+            <form action="{{ route('payment.show') }}" method="POST">
             @csrf
             <button type="submit"> BUY </button>
             </form>

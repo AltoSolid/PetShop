@@ -6,9 +6,9 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Order;
 
-class Item extends Model
+class Payment extends Model
 {
-    //attributes id, product_id, order_id, quantity created_at, updated_at
+    //attributes id, products_id, orders_id, quantity created_at, updated_at
 
     public function getId()
     {
@@ -23,12 +23,12 @@ class Item extends Model
 
     public function getOrderId()
     {
-        return $this->attributes['order_id'];
+        return $this->attributes['orders_id'];
     }
 
     public function setOrderId($id)
     {
-        $this->attributes['order_id'] = $id;
+        $this->attributes['orders_id'] = $id;
     }
 
     public function order(){
