@@ -15,17 +15,17 @@ class PaymentController extends Controller
 
     public function show(Request $request)
     {
-        $order = new Order();
-        //dd($order->getId());
+        $order = new Order(); 
+        $order->setOrderDate(now());
+        $order->setPrice("0"); 
+        $order->save();
         $totalPrice = 0;
         $products = $request->session()->get("products");
         if ($products) {
             $keys = array_keys($products);
             for ($i = 0; $i < count($keys); $i++) {
                 $item = new OrdersProducts();
-                $item->setOrderId($keys[$i]); 
-                //$item->setOrderId($order->getId());  //There is an error here
-
+                $item->setOrderId($order->getId());  //There is an error here
                 $item->setProductId($keys[$i]);
                 $item->setQuantity($products[$keys[$i]]);                
                 $item->save();
@@ -37,7 +37,7 @@ class PaymentController extends Controller
             $order->save();
 
             $request->session()->forget('products');
-            return redirect()->route('product.show');
+            return back()->with('success', 'The products had been purchased successfully!');
         }
     }
 }
