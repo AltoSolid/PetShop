@@ -90,14 +90,7 @@ Route::get('/image/index', 'ImageController@index')->name("image.index");
 Route::post('/image/save', 'ImageController@save')->name("image.save");
 
 Route::get('/download-pdf','MeetingController@downloadPdf')->name("downloadPdf");
-Route::get('/send-mail',function(){
-    echo "......";
-    $details = [
-        'title' => "TITLE",
-        'body' => "BODY",
-    ];
-    echo($details['title']);
-    \Mail::to('virtualpetshopmail@gmail.com')->send(new \App\Mail\TestMail($details));
-});
+
+Route::get('/test-email', 'MailController@sendEmail')->name('test-email');
 
 Auth::routes();
