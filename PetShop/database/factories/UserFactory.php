@@ -25,7 +25,6 @@ $factory->define(User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'contact' => $faker->numberBetween(3001112222,3220002211),
         'creditCard'=>$faker->bankAccountNumber,
-        'amount'=> $faker->randomNumber(),
         'petlist'=>'',
         'remember_token' => Str::random(10),
     ];
