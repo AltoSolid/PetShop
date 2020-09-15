@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Meeting;
+use PDF;
 class MeetingController extends Controller
 {
     public function showAll(){
@@ -55,6 +56,12 @@ class MeetingController extends Controller
         $deleted->delete();
         return redirect()->route('meeting.show');
 
+    }
+
+    public function downloadPdf(){
+        $data = Meeting::all();
+        $pdf = PDF::loadView('pdf')->setPaper('a4','landscape');
+        return $pdf->download('carta.pdf');
     }
 
     

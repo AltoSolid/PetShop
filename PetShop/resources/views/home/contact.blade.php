@@ -12,6 +12,7 @@
                     <p>{{__('information.contactInformation.petshopPhone')}}</p> <hr>
                     <p>{{__('information.contactInformation.contactEmail')}}</p> <hr>
 
+                <a href="{{route('downloadPdf')}}">{{__('information.contactInformation.publicity.panfleto')}}</a>
                 </div>
             </div>
         </div>

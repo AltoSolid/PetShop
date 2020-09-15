@@ -117,3 +117,16 @@
     display: table;
     clear: both;
   }
+
+
+  .panfleto-info{
+    font-weight: bold;
+    font-family: "montserrat";
+    font-size: 40px;
+    margin: 8px;
+  }
+
+  .panfleto-image{
+    max-width:100%; 
+    height:auto; 
+  }
