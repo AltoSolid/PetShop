@@ -43,7 +43,14 @@ return [
 
             ]
     ],
-
+    "header" => [
+        "delete"=> "Delete cart items",
+        "see"=> "See cart",
+    ],
+    "mail" => [
+        "content"=> "This is a c-rial email, it's not serious k?",
+        "title"=> "PetShop Impfstoff",
+    ],    
     "master" => [
         "navBarButtons" => [
             "showPets" => "Show pets",
@@ -78,7 +85,10 @@ return [
         "deleteButton" => "Delete this Pet"
 
     ],
-
+    "payment" => [
+        "back"=> "Back",
+        "buy"=> "Buy",
+    ],
     "product" => [
         "createProduct" => [
             "title" => "Create Product",

@@ -1,5 +1,5 @@
 <?php
-
+//Autor : Felipe Ríos López
 namespace App\Http\Controllers;
 use App\Mail\Email;
 use Illuminate\Support\Facades\Mail;
