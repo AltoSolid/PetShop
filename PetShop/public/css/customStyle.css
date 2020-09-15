@@ -83,7 +83,7 @@
 .info {
     font-weight: bold;
     font-family: "montserrat";
-    font-size: 20px;
+    font-size: 80px;
     margin: 8px;
 }
 
@@ -127,6 +127,6 @@
   }
 
   .panfleto-image{
-    max-width:100%; 
+    max-width:60%; 
     height:auto; 
   }

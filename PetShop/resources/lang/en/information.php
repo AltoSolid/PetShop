@@ -4,6 +4,13 @@
 return [
     "homePage" => "Home Page PetShop",
 
+    "pdf" => [
+        "PetShop" => "PetShop",
+        "who" => "Who are we?",
+        "mision" => "What is our Mission?",
+        "vision" => "What is our Vision?"
+    ],
+
     "indexWelcome" => "Welcome to our Petshop",
 
     "contactInformation" => [
@@ -15,8 +22,19 @@ return [
         "publicity" => [
             "panfleto" => "Want a beautiful panfleto?",
             "intro" => "Petshop is not just a store, it is a world in which masters and pets can share moments of happiness with others.",
-            "mission" => "Our mission is to be the largest pet community in all of America.",
+            "mision" => "Our mission is to be the largest pet community in all American continent.",
             "vision" => "Our vision is to be able to reach all the countries of America, not only virtually but also physically to each one.",
+            "pets" => "We currently have presence in more than 5 countries in South America",
+            "Countries" => [
+                "Colombia" => "COLOMBIA: Headquarters in Medellín. (Other locations: Cali, Bogotá, Barranquilla).",
+                "Peru" => "PERÚ: Headquarters in Lima",
+                "Argentina" => "ARGENTINA: Headquarters in Buenos Aires. (Other locations: Mendoza, Córdoba).",
+                "Brasil" => "BRASIL: Headquarters in Porto Alegre. (Other locations: Recife, Curitiba).",
+                "Paraguay" => "PARAGUAY: Headquarters in Asunción. (Other locations: Luque).",
+                "Venezuela" => "VENEZUELA: Headquarters in Caracas.",
+                "Mexico" => "MÉXICO: Headquarters in Ciudad de Mexico. (Other locations: Guadalajara).",
+                "CostaRica" => "COSTA RICA: Headquarters in San José. (Other locations: Cartago, Alajuela)." ,    
+            ] 
 
             ]
     ],
@@ -94,7 +112,8 @@ return [
         "showId" => [
             "buttonDelete" => "Delete", 
             "participants" => "PARTICIPANTS"
-        ]
+        ],
+        "Message" => "The meeting has been created successfully!"
         
     ]
 
