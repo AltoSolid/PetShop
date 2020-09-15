@@ -20,12 +20,12 @@
             <br>
             <form action="{{ route('payment.show') }}" method="POST">
                 @csrf
-                <button class="button_personalized type="submit"> BUY </button>
+                <button class="button_personalized" type="submit"> BUY </button>
             </form>
             <br>
             <form action="{{ route('product.show') }}" method="GET">
                 @csrf
-                <button class="button_personalized type="submit"> BACK </button>
+                <button class="button_personalized" type="submit"> BACK </button>
             </form>            
         </ul>
     </div>
