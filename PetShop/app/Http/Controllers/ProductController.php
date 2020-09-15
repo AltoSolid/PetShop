@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Order;
-use App\Item;
+use App\OrdersProducts;
 use Illuminate\Http\Request;
 
 
@@ -101,7 +101,7 @@ class ProductController extends Controller
     }
 
 
-    public function buy(Request $request)
+   /* public function buy(Request $request)
     {
         $order = new Order();
 
@@ -110,7 +110,7 @@ class ProductController extends Controller
         if ($products) {
             $keys = array_keys($products);
             for ($i = 0; $i < count($keys); $i++) {
-                $item = new Item();
+                $item = new OrdersProducts();
                 $item->setQuantity($products[$keys[$i]]);
                 $item->setProductId($keys[$i]);
                 $item->setOrderId($keys[$i]);
@@ -125,12 +125,5 @@ class ProductController extends Controller
             $request->session()->forget('products');
             return redirect()->route('product.show');
         }
-    }
-
-
-    public function payment(Request $request)
-    {
-            return redirect()->route('payment.buy');
-    
-    }
+    } */
 }

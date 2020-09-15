@@ -1,9 +1,11 @@
 <?php
 
-//Felipe Ríos López
+//Autor: Felipe Ríos López
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Product;
+use App\OrdersProducts;
 use Illuminate\Http\Request;
 
 
@@ -11,10 +13,31 @@ class PaymentController extends Controller
 {
 
 
-    public function payment(Request $request)
+    public function show(Request $request)
     {
-        //Here is the code of saving...
-            return redirect()->route('product.payment');
-    
+        $order = new Order();
+        //dd($order->getId());
+        $totalPrice = 0;
+        $products = $request->session()->get("products");
+        if ($products) {
+            $keys = array_keys($products);
+            for ($i = 0; $i < count($keys); $i++) {
+                $item = new OrdersProducts();
+                $item->setOrderId($keys[$i]); 
+                //$item->setOrderId($order->getId());  //There is an error here
+
+                $item->setProductId($keys[$i]);
+                $item->setQuantity($products[$keys[$i]]);                
+                $item->save();
+                $actualProduct = Product::find($keys[$i]);
+                $totalPrice = $totalPrice + $actualProduct->getPrice() * $products[$keys[$i]];
+            }
+            $order->setOrderDate(now());
+            $order->setPrice($totalPrice);
+            $order->save();
+
+            $request->session()->forget('products');
+            return redirect()->route('product.show');
+        }
     }
 }
