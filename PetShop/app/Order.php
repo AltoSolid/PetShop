@@ -5,16 +5,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\OrdersProducts;
+
 class Order extends Model
 {
 
     protected $fillable = ['orderDate','price'];
 
-    public function getId(){
+    public function getId()
+    {
         return $this->attributes['id'];
     }
 
-    public function setId($id){
+    public function setId($id)
+    {
         $this->attributes['id']= $id;
     }
 
@@ -42,8 +46,8 @@ class Order extends Model
         $this->attributes['price'] = $price;
     }
 
-    public function items(){
-        return $this->hasMany(Item::class);
+    public function ordersproducts(){
+        return $this->hasMany(OrdersProducts::class);
     }
 
     public function payment(){

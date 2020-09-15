@@ -54,9 +54,9 @@ Route::get('/cart/removeCart', 'ProductController@removeCart')->name("product.re
 
 Route::get('/cart/showCart', 'ProductController@showCart')->name("product.showCart");
 
-Route::post('/cart/buy', 'ProductController@buy')->name("product.buy");
+//Route::post('/cart/buy', 'ProductController@buy')->name("product.buy");
 
-//Route::get('/cart/payment', 'ProductController@payment')->name("product.payment");
+Route::post('/cart/payment', 'PaymentController@show')->name("payment.show");
 
 
 //ORDER
@@ -86,7 +86,8 @@ Route::get('/meeting/destroy/{id}', 'MeetingController@destroy')->name("meeting.
 
 //IMAGES
 Route::get('/image/index', 'ImageController@index')->name("image.index");
+
+
 Route::post('/image/save', 'ImageController@save')->name("image.save");
+
 Auth::routes();
-
-
