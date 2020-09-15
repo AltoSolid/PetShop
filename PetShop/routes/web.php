@@ -50,7 +50,7 @@ Route::post('/product/save', 'ProductController@save')->name("product.save");
 
 Route::post('/product/addToCart/{id}', 'ProductController@addToCart')->name("product.addToCart");
 
-Route::get('/cart/removeCart', 'ProductController@removeCart')->name("product.removeCart");
+Route::post('/cart/removeCart', 'ProductController@removeCart')->name("product.removeCart");
 
 Route::get('/cart/showCart', 'ProductController@showCart')->name("product.showCart");
 

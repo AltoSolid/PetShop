@@ -68,21 +68,19 @@ class ProductController extends Controller
 
     public function addToCart($id, Request $request)
     {
-        //$quantity = $request->session()->get("products");
-        //dd($quantity);   //To see how do it get the quantity     
         $data = []; //to be sent to the view
         $quantity = $request->quantity;
         $products = $request->session()->get("products");
         $products[$id] = $quantity;
         $request->session()->put('products', $products);
-        return back();
+        return back()->with('success', 'The product has been added successfully!');
     }
 
 
     public function removeCart(Request $request)
     {
         $request->session()->forget('products');
-        return redirect()->route('product.show');
+        return back()->with('success', 'The product has been removed successfully!');;
     }
 
 
@@ -95,35 +93,9 @@ class ProductController extends Controller
             $keys = array_keys($products);
             $productsModels = Product::find($keys);
             $data["products"] = $productsModels;
-            return view('product.cart')->with("data", $data); //return view product cart?
+            return view('product.cart')->with("data", $data);
         }
         return redirect()->route('product.show');
     }
 
-
-   /* public function buy(Request $request)
-    {
-        $order = new Order();
-
-        $totalPrice = 0;
-        $products = $request->session()->get("products");
-        if ($products) {
-            $keys = array_keys($products);
-            for ($i = 0; $i < count($keys); $i++) {
-                $item = new OrdersProducts();
-                $item->setQuantity($products[$keys[$i]]);
-                $item->setProductId($keys[$i]);
-                $item->setOrderId($keys[$i]);
-                $item->save();
-                $actualProduct = Product::find($keys[$i]);
-                $totalPrice = $totalPrice + $actualProduct->getPrice() * $products[$keys[$i]];
-            }
-            $order->setOrderDate(now());
-            $order->setPrice($totalPrice);
-            $order->save();
-
-            $request->session()->forget('products');
-            return redirect()->route('product.show');
-        }
-    } */
 }
