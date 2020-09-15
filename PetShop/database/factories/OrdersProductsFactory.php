@@ -1,5 +1,6 @@
 <?php
 
+ //Autor: Juan Felipe Londoño Gaviria
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\OrdersProducts;

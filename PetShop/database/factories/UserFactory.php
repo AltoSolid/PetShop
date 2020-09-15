@@ -1,5 +1,6 @@
 <?php
 
+//Autor: Santiago Hincapié Murillo
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\User;
