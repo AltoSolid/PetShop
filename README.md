@@ -29,9 +29,8 @@
 - Apache 
 - Laravel (This project was developed with laravel 7.x)
 - DomPDF Library
-- Auth for login (Laravel)
-- Cofigure the port of the data base for MYSQL connection
-- Create a DB in MYSQL
+- Configure the port of the data base for MYSQL connection
+- Create the DB for the page in MYSQL
 
 ## Installing DompDF Library: 
 Run the following command to install the DompPDF library in your machine: 
@@ -44,17 +43,20 @@ Run the following command to install the DompPDF library in your machine:
 If you have any problem please check out the 
 [Official Documentation:](https://github.com/barryvdh/laravel-dompdf) of DomPDF Library
 
+## Configure the port of the data base for MYSQL connection
+in the `.env` file in `DB_PORT=` replace with the port you have MSQL with Xampp or Wampp. In this case we use port 3307
+![Alt text](/PetShop/storage/images_Guide/guide5.png)
+
+## Create the DB for the page in MYSQL
+As you saw before we have `DB_DATABSE=petshopdb`
+
+
+You must go to `http://localhost/phpmyadmin/` and create a table with the specific name, in this project we use `petshopdb`
+![Alt text](/PetShop/storage/images_Guide/guide6.png)
+
+**Now you are ready to run the app without dependencies issues.**
 -----------------------------------------------------------------------
-## Installing Auth for login (Laravel):
-`
-php artisan serve
-`
-
-**Now you are ready to run the app with dependencies issues.**
-
-
------------------------------------------------------------------------
-# Running the Project - If you have download the project (Not cloning from Github)
+# 2.Running the Project - If you have download the project (Not cloning from Github)
 
 Place the foder project called PetShop inside the folder Petshop. 
 
@@ -78,4 +80,4 @@ Go to the following url in your browser:
 
 ---------------------------------------------------------------------------
 
-# Running the Project - If you clone the project from github:
+# 2.Running the Project - If you clone the project from github:
