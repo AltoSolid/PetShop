@@ -1,3 +1,4 @@
+<!-- Author: Juan Felipe Londoño-->
 @extends('layouts.master')
 
 @section('content')

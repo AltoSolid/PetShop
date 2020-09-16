@@ -21,12 +21,12 @@
             <br>
             <form action="{{ route('payment.show') }}" method="POST">
                 @csrf
-                <button class="button_personalized" type="submit">  {{__('information.payment.buy) }} </button>
+                <button class="button_personalized" type="submit">  {{__('information.payment.buy') }} </button>
             </form>
             <br>
             <form action="{{ route('product.show') }}" method="GET">
                 @csrf
-                <button class="button_personalized" type="submit"> {{__('information.payment.back) }} </button>
+                <button class="button_personalized" type="submit"> {{__('information.payment.back') }} </button>
             </form>            
         </ul>
     </div>

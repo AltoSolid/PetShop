@@ -1,6 +1,6 @@
 <?php
 
-//Author: Santiago Hincapié Murillo
+//Author: Santiago Hincapié Murillo and Felipe Ríos López
 return [
     "homePage" => "Home Page PetShop",
 
@@ -14,6 +14,9 @@ return [
     "email" =>[
         "title" => "TITLE",
         "body" => "BODY",
+        "email" => "virtualpetshopmail@gmail.com",
+        "noreply" => "NO REPLY",
+        "subject" => "PetShop Email"
     ],
 
     "indexWelcome" => "Welcome to our Petshop",

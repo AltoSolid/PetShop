@@ -1,3 +1,5 @@
+/*Author: Santiago Hincapié Murillo*/
+
 .card-header {
     font-weight: bold;
     font-family: "montserrat";
@@ -83,7 +85,7 @@
 .info {
     font-weight: bold;
     font-family: "montserrat";
-    font-size: 80px;
+    font-size: 20px;
     margin: 8px;
 }
 

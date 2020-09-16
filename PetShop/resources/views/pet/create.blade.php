@@ -1,3 +1,4 @@
+<!-- Author: Santiago Hincapié Murillo-->
 @extends('layouts.master')
 @section("title", $data["title"])
 @section('content')

@@ -1,3 +1,4 @@
+<!-- Autor: Felipe Ríos López -->
 @extends('layouts.master')
 
 @section('content')

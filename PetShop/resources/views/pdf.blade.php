@@ -1,3 +1,4 @@
+<!-- Autor: Santiago Hincapié Murillo -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
         <div>
             <img src="storage\puppies.jpg" alt="" class="panfleto-image">
         </div>
-        <h2>{{__('information.pdf.mission')}}</h2>
+        <h2>{{__('information.pdf.mision')}}</h2>
         <h3>{{__('information.contactInformation.publicity.mision')}}</h3>
         <div>
             <img src="storage\cats.jpg" alt="" class="panfleto-image">

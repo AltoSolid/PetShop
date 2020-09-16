@@ -20,7 +20,7 @@ use Illuminate\Support\Str;
 $factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->unique()->text,
-        'category' => $faker->randomElement(['Alimentación', 'Accesorios', 'Juguetes', 'Medicamentos']),
+        'category' => $faker->randomElement(['Feeding', 'Accessories', 'toys', 'Medicines']),
         'detail' => 'Good product!! Buy IT!',
         'price'=> $faker->numberBetween($min = 200, $max = 300000),
     ];

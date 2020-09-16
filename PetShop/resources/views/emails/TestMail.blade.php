@@ -1,3 +1,4 @@
+<!-- Author: Santiago Hincapié Murillo-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +10,8 @@
 </head>
 
 <body>
-    <h1>{{ $mail_data['title'] }}  </h1>
-    <p> {{ $mail_data['body'] }}   </p>
+    <h1>{{ $mail_data['title'] }} </h1>
+    <p> {{ $mail_data['body'] }} </p>
     <p> {{ __('information.mail.content')}} </p>
 </body>
 

@@ -28,6 +28,6 @@ class Email extends Mailable
      */
     public function build()
     {
-        return $this->from('shincapiem@eafit.edu.co', 'Este es el de ya')->subject('This is a proof')->view('emails.TestMail',['mail_data'=>$this->mailToSend]);
+        return $this->from("{{ __('information.email.email')}}", "{{ __('information.email.noreply')}}")->subject("{{ __('information.email.subject')}}")->view('emails.TestMail',['mail_data'=>$this->mailToSend]);
     }
 }

@@ -13,6 +13,6 @@ class MailController extends Controller
             'body' => "BODY",
         ];
 
-        Mail::to('virtualpetshopmail@gmail.com')->send(new Email($data));
+        Mail::to("{{ __('information.email.email')}}")->send(new Email($data));
     }
 }
