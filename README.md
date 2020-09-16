@@ -31,6 +31,7 @@
 - DomPDF Library
 - Configure the port of the data base for MYSQL connection
 - Create the DB for the page in MYSQL
+- Run Fakers 
 
 ## Installing DompDF Library: 
 Run the following command to install the DompPDF library in your machine: 
@@ -47,12 +48,20 @@ If you have any problem please check out the
 in the `.env` file in `DB_PORT=` replace with the port you have MSQL with Xampp or Wampp. In this case we use port 3307
 ![Alt text](/PetShop/storage/images_Guide/guide5.png)
 
-## Create the DB for the page in MYSQL
+## Create the DB for the page in PHPMYADMIN
 As you saw before we have `DB_DATABSE=petshopdb`
 
 
 You must go to `http://localhost/phpmyadmin/` and create a table with the specific name, in this project we use `petshopdb`
+
+
 ![Alt text](/PetShop/storage/images_Guide/guide6.png)
+
+## Run fakers
+Run the following command:
+` php artisan migrate:fresh --seed`
+
+![Alt text](/PetShop/storage/images_Guide/guide7.png)
 
 **Now you are ready to run the app without dependencies issues.**
 -----------------------------------------------------------------------
