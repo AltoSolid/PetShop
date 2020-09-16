@@ -22,11 +22,12 @@
 
 # HOW TO RUN THE PROGRAM:
 
-# 1 What do you need to have installed to run the project correctly?
+# 1. What do you need to have installed to run the project correctly?
 - php
 - Xampp or Wampp
 - MYSQL 
 - Apache 
+- Composer
 - Laravel (This project was developed with laravel 7.x)
 - DomPDF Library
 - Configure the port of the data base for MYSQL connection
@@ -64,8 +65,9 @@ Run the following command:
 ![Alt text](/PetShop/storage/images_Guide/guide7.png)
 
 **Now you are ready to run the app without dependencies issues.**
+
 -----------------------------------------------------------------------
-# 2.Running the Project - If you have download the project (Not cloning from Github)
+# 2. Running the Project - If you have download the project (Not cloning from Github)
 
 Place the foder project called PetShop inside the folder Petshop. 
 
@@ -87,6 +89,16 @@ The Page will display on your screen like this:
 Go to the following url in your browser: 
 `http://127.0.0.1:8000/login`
 
+Now you can start using the page
+
 ---------------------------------------------------------------------------
 
 # 2.Running the Project - If you clone the project from github:
+Run the following command in the project folder: `php artisan key:generate `
+
+![Alt text](/PetShop/storage/images_Guide/guide8.png)
+
+Run the following command: `composer update `
+![Alt text](/PetShop/storage/images_Guide/guide9.png)
+
+*Now you can following the steps of: Running the Project - If you have download the project (Not cloning from Github)*
