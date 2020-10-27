@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Meeting extends Model
 {
@@ -10,6 +11,14 @@ class Meeting extends Model
     //attributes id, name, price, created_at, updated_at
     protected $fillable = ['place', 'date', 'details', 'image'];
     protected $table = 'meeting';
+    public static function validate(Request $request){
+        $request->validate([
+            "place" => "required",        
+            "date" => "required|date",    
+            "details" => "required",
+            "image" => "required"
+            ]);
+    }
     public function getId()
     {
         return $this->attributes['id'];

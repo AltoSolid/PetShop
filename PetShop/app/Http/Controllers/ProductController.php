@@ -35,15 +35,10 @@ class ProductController extends Controller
 
     public function save(Request $request)
     {
-        $request->validate([
-            "name" => "required",
-            "category" => "required|in:Feeding,Accessories,Medicines",
-            "detail" => "required",
-            "price" => "required|numeric|gt:0"
-        ]);
+        Product::validate($request);
         Product::create($request->only(["name", "category", "detail", "price"]));
 
-        return back()->with("{{__('information.message.messageSuscess')}}", "{{__('information.product.created')}}");
+        return back()->with(__('information.message.messageSuccess'), __('information.product.createProduct.created'));
     }
 
 
@@ -73,14 +68,14 @@ class ProductController extends Controller
         $products = $request->session()->get("products");
         $products[$id] = $quantity;
         $request->session()->put('products', $products);
-        return back()->with("{{__('information.message.messageSuscess')}}","{{__('information.product.createProduct.added')}}");
+        return back()->with(__('information.message.messageSuccess'),__('information.product.createProduct.added'));
     }
 
 
     public function removeCart(Request $request)
     {
         $request->session()->forget('products');
-        return back()->with("{{__('information.message.messageSuscess')}}", "{{__('information.product.removed')}}");;
+        return back()->with(__('information.message.messageSuccess'), __('information.product.removed'));
     }
 
 

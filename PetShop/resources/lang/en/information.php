@@ -108,8 +108,8 @@ return [
             "success" => "The products had been purchased successfully!",
             "created" => "The product has been created successfully",
             "added" => "The product has been added successfully",
-            "removed" => "The product has been removed successfully"
         ],
+        "removed" => "The product has been removed successfully",
 
         "delete" => "It has been removed successfully!",
 
@@ -150,7 +150,7 @@ return [
     ],
 
     "message" => [
-        "messageSuccess" => "Success",
+        "messageSuccess" => "success",
     ],
 
 

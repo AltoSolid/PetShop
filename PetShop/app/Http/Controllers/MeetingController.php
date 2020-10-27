@@ -39,14 +39,9 @@ class MeetingController extends Controller
 
     public function save(Request $request)
     {
-        $request->validate([
-            "place" => "required",        
-            "date" => "required|date",    
-            "details" => "required",
-            "image" => "required"
-            ]);
+            Meeting::validate($request);
             Meeting::create($request->only(["place","date","details","image"]));
-            return back()->with("{{__('information.message.messageSuscess')}}","{{__('information.meeting.Message')}}");        
+            return back()->with(__('information.message.messageSuccess'),__('information.meeting.Message'));        
     }
 
 

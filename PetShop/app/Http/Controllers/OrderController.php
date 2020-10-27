@@ -30,14 +30,10 @@ class OrderController extends Controller
 
     public function save(Request $request)
     {
-        $request->validate([
-            "orderDate" => "required|date",
-            "price" => "required|numeric|gt:0",
-         
-        ]);
+        Order::validate($request);
         Order::create($request->only(["orderDate", "price"]));
 
-        return back()->with("{{__('information.message.messageSuscess')}}","{{__('information.order.created')}}");
+        return back()->with(__('information.message.messageSuccess'),__('information.order.created'));
     }
 
 

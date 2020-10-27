@@ -7,11 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\OrdersProducts;
 
+use Illuminate\Http\Request;
+
 class Order extends Model
 {
 
     protected $fillable = ['orderDate','price'];
-
+    public static function validate(Request $request){
+        $request->validate([
+            "orderDate" => "required|date",
+            "price" => "required|numeric|gt:0",
+         
+        ]);
+    }
     public function getId()
     {
         return $this->attributes['id'];

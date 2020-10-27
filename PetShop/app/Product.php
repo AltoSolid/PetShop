@@ -5,11 +5,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Http\Request;
 class Product extends Model
 {
     //attributes id, name, price, created_at, updated_at
     protected $fillable = ['name', 'category', "detail", "price"];
-
+    public static function validate(Request $request){
+        $request->validate([
+            "name" => "required",
+            "category" => "required|in:Feeding,Accessories,Medicines",
+            "detail" => "required",
+            "price" => "required|numeric|gt:0"
+        ]);
+    }
 
     public function getId()
     {

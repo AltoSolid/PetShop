@@ -5,12 +5,24 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Http\Request;
 class Pet extends Model
 {
     //Atributes id, petname, typeAnimal, medicalHistory, raceAnimal, available, genre, age
 
     protected $fillable = ['petName', 'typeAnimal', "medicalHistory", "raceAnimal", "available", "genre", "age", "image"];
-
+    public static function validate(Request $request){
+        $request->validate([
+            "petName" => "required",
+            "typeAnimal" => "required",
+            "medicalHistory" => "required",
+            "raceAnimal" => "required",
+            "available" => "required",
+            "genre" => "required",
+            "age" => "required|numeric",
+            "image" => "required"
+        ]);
+    }
     public function getId()
     {
         return $this->attributes['id'];

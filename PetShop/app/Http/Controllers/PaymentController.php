@@ -37,7 +37,7 @@ class PaymentController extends Controller
             $order->save();
 
             $request->session()->forget('products');
-            return back()->with("{{__('information.message.messageSuscess')}}","{{__('information.product.success')}}");
+            return back()->with(__('information.message.messageSuccess'),__('information.product.success'));
         }
     }
 }

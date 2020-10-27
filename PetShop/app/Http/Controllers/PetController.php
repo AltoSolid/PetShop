@@ -51,19 +51,10 @@ class PetController extends Controller
 
     public function save(Request $request)
     {
-        $request->validate([
-            "petName" => "required",
-            "typeAnimal" => "required",
-            "medicalHistory" => "required",
-            "raceAnimal" => "required",
-            "available" => "required",
-            "genre" => "required",
-            "age" => "required|numeric",
-            "image" => "required"
-        ]);
+        Pet::validate($request);
         Pet::create($request->only(["petName", "typeAnimal", "typeAnimal", "medicalHistory", "raceAnimal", "available", "genre", "age","image"]));
 
-        return back()->with("{{__('information.message.messageSuscess')}}", "{{__('information.pet.success')}}");
+        return back()->with(__('information.message.messageSuccess'), __('information.pet.success'));
     }
 
     
