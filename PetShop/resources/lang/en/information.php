@@ -46,14 +46,17 @@ return [
 
             ]
     ],
+
     "header" => [
         "delete"=> "Delete cart items",
         "see"=> "See cart",
     ],
+
     "mail" => [
         "content"=> "This is a c-rial email, it's not serious k?",
         "title"=> "PetShop Impfstoff",
     ],    
+
     "master" => [
         "navBarButtons" => [
             "showPets" => "Show pets",
@@ -73,6 +76,7 @@ return [
             "petPetition" => "Please fill all the information below:",
             "petAdopt" => "Avaibale to adopt?",
             "petGenre" => "Genre",
+            "success" => "Pet has been created successfully!"
         ],
         "petInfo" => [
             "information" => "Information:",
@@ -86,12 +90,14 @@ return [
             "backButton" => "Return to all the Pets registered"
         ],
         "deleteButton" => "Delete this Pet"
-
     ],
+
     "payment" => [
         "back"=> "Back",
         "buy"=> "Buy",
+        "pay" => "How do you want to pay?",
     ],
+
     "product" => [
         "createProduct" => [
             "title" => "Create Product",
@@ -99,6 +105,10 @@ return [
             "feeding" => "Feeding",
             "medicines" => "Medicines",
             "accesories" => "Accessories",
+            "success" => "The products had been purchased successfully!",
+            "created" => "The product has been created successfully",
+            "added" => "The product has been added successfully",
+            "removed" => "The product has been removed successfully"
         ],
 
         "delete" => "It has been removed successfully!",
@@ -110,12 +120,13 @@ return [
             "price" => "Price:",
             "backButton" => "Back",
             "deleteButton" => "Delete",
-        ]
         ],
+    ],
 
     "order" => [
         "delete" => "It has been removed successfully!",
-        "create" => "Create Order"
+        "create" => "Create Order",
+        "created" => "The order has been created successfully!"
     ],
 
     "meeting" => [
@@ -132,8 +143,15 @@ return [
             "participants" => "PARTICIPANTS"
         ],
         "Message" => "The meeting has been created successfully!"
-        
-    ]
+    ],
+    
+    "home" => [
+        "loggedMessage" => "You are logged in!"
+    ],
+
+    "message" => [
+        "messageSuccess" => "Success",
+    ],
 
 
 ]

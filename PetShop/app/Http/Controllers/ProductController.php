@@ -43,7 +43,7 @@ class ProductController extends Controller
         ]);
         Product::create($request->only(["name", "category", "detail", "price"]));
 
-        return back()->with('success', 'The product has been created successfully!');
+        return back()->with("{{__('information.message.messageSuscess')}}", "{{__('information.product.created')}}");
     }
 
 
@@ -73,14 +73,14 @@ class ProductController extends Controller
         $products = $request->session()->get("products");
         $products[$id] = $quantity;
         $request->session()->put('products', $products);
-        return back()->with('success', 'The product has been added successfully!');
+        return back()->with("{{__('information.message.messageSuscess')}}","{{__('information.product.createProduct.added')}}");
     }
 
 
     public function removeCart(Request $request)
     {
         $request->session()->forget('products');
-        return back()->with('success', 'The product has been removed successfully!');;
+        return back()->with("{{__('information.message.messageSuscess')}}", "{{__('information.product.removed')}}");;
     }
 
 

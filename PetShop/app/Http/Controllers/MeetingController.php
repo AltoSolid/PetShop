@@ -46,7 +46,7 @@ class MeetingController extends Controller
             "image" => "required"
             ]);
             Meeting::create($request->only(["place","date","details","image"]));
-            return back()->with('success','The meeting has been created successfully!');        
+            return back()->with("{{__('information.message.messageSuscess')}}","{{__('information.meeting.Message')}}");        
     }
 
 

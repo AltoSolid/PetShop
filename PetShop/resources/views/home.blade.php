@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {{__('information.home.loggedMessage')}}
                 </div>
             </div>
         </div>

@@ -37,7 +37,7 @@ class OrderController extends Controller
         ]);
         Order::create($request->only(["orderDate", "price"]));
 
-        return back()->with('success','The order has been created successfully!');
+        return back()->with("{{__('information.message.messageSuscess')}}","{{__('information.order.created')}}");
     }
 
 

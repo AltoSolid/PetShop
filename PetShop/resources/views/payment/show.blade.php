@@ -8,7 +8,7 @@
 <div class="row p-5">
     <div class="col-md-12">
         <ul id="errors">
-            How do you want to pay?
+        {{__('information.payment.pay')}}
         </ul>
     </div>
 </div>
