@@ -13,14 +13,16 @@
                 <div class="row p-5">
                     <div class="col-md-12">
                         <ul id="errors">
-                            <b>Meeting details: {{ $data["meeting"]["details"] }} </b>
+                            @foreach($data["meetinguser"] as $meeting)
+                            <b> {{__('information.meeting.info.details')}} {{ $meeting->getDetails()}} </b>
                             <br>
-                            Meeting date: {{ $data["meeting"]["date"]}}
+                             {{__('information.meeting.info.date')}} {{ $meeting->getDate()}}
                             <br />
-                            Creation: {{ $data["meeting"]["created_at"] }}
+                             {{__('information.meeting.info.creation')}} {{ $meeting->getCreation()}} 
                             <br />
-                            Image of meeting place: {{ $data["meeting"]["image"] }}
+                             {{__('information.meeting.info.image')}} {{ $meeting->getImage()}}
                         </ul>
+                        @endforeach
                     </div>
                     <form method="GET" action="{{ route('meeting.destroy', $data['meeting']->getId())  }}">
                         @csrf

@@ -25,7 +25,7 @@
                         <input type="text" placeholder="Male or female" name="genre" value="{{ old('genre') }}" class="form" />
                         <input type="text" placeholder="Age (in years)" name="age" value="{{ old('age') }}" class="form" />
                         <hr>
-                        <p class="info">Choose a photo</p>
+                        <p class="info">{{__('information.pet.petInfo.choosePhoto')}}</p>
                         <input type="file" placeholder="image" name="image" value="{{ old('image') }}" class="form" />
                         <hr>
                         <input type="submit" value="Send" class="btn button_form" /> 

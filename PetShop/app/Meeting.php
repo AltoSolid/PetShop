@@ -69,12 +69,17 @@ class Meeting extends Model
 
     public function getImage()
     {
-        return $this->attributes['age'];
+        return $this->attributes['image'];
     }
 
     public function setImage($image)
     {
         $this->attributes['image'] = $image;
+    }
+
+    public function getCreation()
+    {
+        return $this->attributes['created_at'];
     }
 
     public function users()

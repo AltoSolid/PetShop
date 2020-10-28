@@ -33,7 +33,7 @@
                             <input type="text" placeholder="Meeting details" name="details" value="{{ old('details') }}" />
                         </div>
 
-                        <p class="info">Choose a photo</p>
+                        <p class="info">{{__('information.meeting.info.choosePhoto')}}</p>
                         <input type="file" placeholder="image" name="image" value="{{ old('image') }}" class="form" />
                         <hr>
 

@@ -13,9 +13,9 @@
 
             @foreach($data["products"] as $product)
             <li>
-                Name: {{ $product->getName() }}, <br>
-                Price: {{ $product->getPrice() }} <br>
-                Quantity: {{ Session::get('products')[$product->getId()] }} <br>
+            {{__('information.product.info.name')}} {{ $product->getName() }}, <br>
+            {{__('information.product.info.price')}} {{ $product->getPrice() }} <br>
+            {{__('information.product.info.quantity')}} {{ Session::get('products')[$product->getId()] }} <br>
             </li>
             @endforeach
             <br>

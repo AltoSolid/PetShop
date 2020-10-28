@@ -87,7 +87,8 @@ return [
             "available" => "Available to adopt?:",
             "genre" => "Genre:",
             "age" => "Age:",
-            "backButton" => "Return to all the Pets registered"
+            "backButton" => "Return to all the Pets registered",
+            "choosePhoto" => "Choose a photo",
         ],
         "deleteButton" => "Delete this Pet"
     ],
@@ -108,6 +109,13 @@ return [
             "success" => "The products had been purchased successfully!",
             "created" => "The product has been created successfully",
             "added" => "The product has been added successfully",
+        ],
+        "info"=>[
+            "category"=> "Name:",
+            "details"=>  "Category:",
+            "name"=>     "Details:",
+            "price"=>    "Price:",
+            "quantity" => "Quantity:",
         ],
         "removed" => "The product has been removed successfully",
 
@@ -142,7 +150,16 @@ return [
             "buttonDelete" => "Delete", 
             "participants" => "PARTICIPANTS"
         ],
-        "Message" => "The meeting has been created successfully!"
+        "Message" => "The meeting has been created successfully!",
+
+        "info" => [
+            "details" => "Meeting details:",
+            "date" => "Meeting date:",
+            "creation" => "Creation:",
+            "image" => "Image of meeting place:",
+            "choosePhoto" => "Choose a photo",
+            "currency" => "pesos",
+        ]
     ],
     
     "home" => [

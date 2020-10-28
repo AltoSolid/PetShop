@@ -9,15 +9,15 @@
         <div class="col-md-8">
         @include('util.message')        
             <div class="card">
-                <div class="card-header">{{ $data["product"]["name"] }}</div>
+                <div class="card-header">{{ $data["title"] }}</div>
 
                 <div class="card-body">
                     <div class="row">
                         <div class="column">
-                            <b>Name:</b> {{ $data["product"]["name"] }}<br />
-                            <b>Category:</b> {{ $data["product"]["category"] }}<br />
-                            <b>Details:</b> {{ $data["product"]["detail"] }}<br />
-                            <b>Price:</b> {{ $data["product"]["price"] }} pesos<br /><br />
+                            <b>{{__('information.product.info.name')}}</b> {{ $data["product"]["name"] }}<br />
+                            <b>{{__('information.product.info.category')}}</b> {{ $data["product"]["category"] }}<br />
+                            <b>{{__('information.product.info.details')}}</b> {{ $data["product"]["detail"] }}<br />
+                            <b>{{__('information.product.info.price')}}</b> {{ $data["product"]["price"] }} {{__('information.product.info.currency')}}<br /><br />
                         </div>
                         <div class="column">
                             <center><img src="storage/logo.jpg" alt="Logo" class="css-class" alt="alt text">
