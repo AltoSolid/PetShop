@@ -62,4 +62,11 @@ class Order extends Model
         return $this->hasOne(Payment::class);
     }    
 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }        
+
+    public function setUserID($ID){
+        $this->attributes['user_id'] = $ID;
+    }
 }

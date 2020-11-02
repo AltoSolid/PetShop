@@ -19,6 +19,8 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->date('orderDate');
             $table->integer('price');
+            $table->bigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

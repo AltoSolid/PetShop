@@ -22,6 +22,7 @@ $factory->define(Order::class, function (Faker $faker) {
     return [
         'orderDate' => $faker->dateTimeBetween('2020-09-06','2022-12-31'),
         'price' => $faker->numberBetween($min = 200, $max = 20000000),
+        'user_id' => App\User::inRandomOrder()->first()->id,
     ];
 });
     

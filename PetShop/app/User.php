@@ -147,7 +147,11 @@ class User extends Authenticatable
         $this->attributes['petList'] = $petList;
     }
 
-    
+    public function orders()
+    {
+        return $this->hasMany(Order::class)->withTimestamps();
+    }
+
     public function meeting()
     {
         return $this->belongsToMany(Meeting::class,'meeting_user')->withTimestamps();

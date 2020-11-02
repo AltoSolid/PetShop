@@ -15,9 +15,11 @@ class PaymentController extends Controller
 
     public function show(Request $request)
     {
+        $userID = auth()->user()->id; 
         $order = new Order(); 
         $order->setOrderDate(now());
         $order->setPrice("0"); 
+        $order->setUserID($userID); 
         $order->save();
         $totalPrice = 0;
         $products = $request->session()->get("products");
@@ -34,6 +36,7 @@ class PaymentController extends Controller
             }
             $order->setOrderDate(now());
             $order->setPrice($totalPrice);
+            $order->setUserID($userID);   
             $order->save();
 
             $request->session()->forget('products');
