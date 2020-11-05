@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/v2/meetings', 'Api\MeetingApi@index')->name("api.meeting.index");
+Route::get('/v2/meetings/{id}', 'Api\MeetingApi@show')->name("api.meeting.show");
