@@ -34,14 +34,14 @@ return [
             "vision" => "Our vision is to be able to reach all the countries of America, not only virtually but also physically to each one.",
             "pets" => "We currently have presence in more than 5 countries in South America",
             "Countries" => [
-                "Colombia" => "COLOMBIA: Headquarters in Medellín. (Other locations: Cali, Bogotá, Barranquilla).",
-                "Peru" => "PERÚ: Headquarters in Lima",
-                "Argentina" => "ARGENTINA: Headquarters in Buenos Aires. (Other locations: Mendoza, Córdoba).",
+                "Colombia" => "COLOMBIA: Headquarters in Medellin. (Other locations: Cali, Bogota, Barranquilla).",
+                "Peru" => "PERU: Headquarters in Lima",
+                "Argentina" => "ARGENTINA: Headquarters in Buenos Aires. (Other locations: Mendoza, Cordoba).",
                 "Brasil" => "BRASIL: Headquarters in Porto Alegre. (Other locations: Recife, Curitiba).",
-                "Paraguay" => "PARAGUAY: Headquarters in Asunción. (Other locations: Luque).",
+                "Paraguay" => "PARAGUAY: Headquarters in Asuncion. (Other locations: Luque).",
                 "Venezuela" => "VENEZUELA: Headquarters in Caracas.",
-                "Mexico" => "MÉXICO: Headquarters in Ciudad de Mexico. (Other locations: Guadalajara).",
-                "CostaRica" => "COSTA RICA: Headquarters in San José. (Other locations: Cartago, Alajuela)." ,    
+                "Mexico" => "MEXICO: Headquarters in Ciudad de Mexico. (Other locations: Guadalajara).",
+                "CostaRica" => "COSTA RICA: Headquarters in San Jose. (Other locations: Cartago, Alajuela)." ,    
             ] 
 
             ]
@@ -60,7 +60,7 @@ return [
     "master" => [
         "navBarButtons" => [
             "showPets" => "Show pets",
-            "newPet" => "New pet",
+            "newPet" => "Create pet",
             "showProducts" => "Show products",
             "createProduct" => "Create product",
             "showMeetings" => "Show meetings",
@@ -86,9 +86,11 @@ return [
             "raceAnimal" => "Race of Animal:",
             "available" => "Available to adopt?:",
             "genre" => "Genre:",
+            "genre2" => "Male or Female",
             "age" => "Age:",
             "backButton" => "Return to all the Pets registered",
             "choosePhoto" => "Choose a photo",
+            "yesNo" => "Yes or No",
         ],
         "deleteButton" => "Delete this Pet"
     ],
@@ -116,6 +118,7 @@ return [
             "name"=>     "Details:",
             "price"=>    "Price:",
             "quantity" => "Quantity:",
+            "add" => "Add"
         ],
         "removed" => "The product has been removed successfully",
 
@@ -159,9 +162,13 @@ return [
             "image" => "Image of meeting place:",
             "choosePhoto" => "Choose a photo",
             "currency" => "pesos",
-        ]
+        ],
+        "image" => "image",
+        "date" => "Enter Date",
+        "place" => "Enter place",
+        "detail" => "Meeting detail",
+        "send" => "Send"
     ],
-    
     "home" => [
         "loggedMessage" => "You are logged in!"
     ],
@@ -169,7 +176,12 @@ return [
     "message" => [
         "messageSuccess" => "success",
     ],
-
-
+    "button" => [
+        "return" => "return",
+        "send" => "send",
+    ],
+    "detail" => "Details",
+    "price" => "Price",
+    "logo" => "logo",
 ]
 ?>
