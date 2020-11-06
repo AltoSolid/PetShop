@@ -15,7 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home.index');
+    #$config['center'] = 'Air Canada Centre, Toronto';
+    #$config['zoom'] = '14';
+    #$config['map_height'] = '500px';
+
+    #$config['scrollwheel'] = false;
+    #$response = \GoogleMaps::load('geocoding')->setParam(['address'=>'santa cruz'])->get();
+    #dd($response);
+#    return view('home.index');
+    return view('welcome2');#->with('map',$response);
 });
 
 
