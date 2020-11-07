@@ -101,3 +101,8 @@ Route::get('/download-pdf','MeetingController@downloadPdf')->name("downloadPdf")
 Route::get('/test-email', 'MailController@sendEmail')->name('test-email');
 
 Auth::routes();
+
+
+//LANG
+
+Route::get('/lang/{locale}', 'HomeController@changeLang')->name("home.lang");
