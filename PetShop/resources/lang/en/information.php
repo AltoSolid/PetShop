@@ -183,5 +183,8 @@ return [
     "detail" => "Details",
     "price" => "Price",
     "logo" => "logo",
+    "map" => "Locate us",
+    "home" => "Home",
+    "copyright" => "Copyright ©; PetShop 2020",
 ]
 ?>
