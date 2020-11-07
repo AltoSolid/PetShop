@@ -32,7 +32,7 @@
 - DomPDF Library
 - Configure the port of the data base for MYSQL connection
 - Create the DB for the page in MYSQL
-- Run Fakers 
+- Run Fakers (optional)
 
 ## Installing DompDF Library: 
 Run the following command to install the DompPDF library in your machine: 
