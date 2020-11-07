@@ -17,10 +17,10 @@
                             <b>{{__('information.product.info.name')}}</b> {{ $data["product"]["name"] }}<br />
                             <b>{{__('information.product.info.category')}}</b> {{ $data["product"]["category"] }}<br />
                             <b>{{__('information.product.info.details')}}</b> {{ $data["product"]["detail"] }}<br />
-                            <b>{{__('information.product.info.price')}}</b> {{ $data["product"]["price"] }} {{__('information.product.info.currency')}}<br /><br />
+                            <b>{{__('information.product.info.price')}}</b> {{ $data["product"]["price"] }} {{__('information.meeting.info.currency')}}<br /><br />
                         </div>
                         <div class="column">
-                            <center><img src="storage/logo.jpg" alt="Logo" class="css-class" alt="alt text">
+                            <center><img src="storage/logo.jpg" alt="{{__('information.logo')}}" class="css-class" alt="alt text">
                         </div>
 
 
@@ -28,10 +28,10 @@
                             @csrf
                             <div class="form-row">
                                 <div class="col-md-12">
-                                    <input type="number" placeholder="Quantity" class="form-control" name="quantity" min="0"  style="width: 80px;">
+                                    <input type="number" placeholder="{{__('information.product.info.quantity')}}" class="form-control" name="quantity" min="0"  style="width: 80px;">
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <button type="submit" class="btn btn-outline-success">Add </button>
+                                    <button type="submit" class="btn btn-outline-success">{{__('information.product.info.add')}} </button>
                                 </div>
                             </div>
                         </form>

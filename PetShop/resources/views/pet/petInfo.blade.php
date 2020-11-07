@@ -21,7 +21,7 @@
                     <ul>
                     </ul>
                 </div>
-                <input type="submit" onclick="location='/pet/show'" value="{{__('information.pet.petInfo.backButton')}}" class="btn button_form"/>
+                <input type="submit" onclick="location='{{ route('pet.show') }}'" value="{{__('information.pet.petInfo.backButton')}}" class="btn button_form"/>
             </div>
         </div>
     </div>

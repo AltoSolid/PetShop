@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('product.save') }}">
                     @csrf
                     <center>
-                    <br><input type="text" placeholder="Name" name="name" value="{{ old('name') }}" />
+                    <br><input type="text" placeholder="{{__('information.product.info.category')}}" name="name" value="{{ old('name') }}" />
                     <br>
                     <br><label for="category">{{__('information.product.createProduct.chooseCategory')}}</label>
                     <select id="category" name="category">
@@ -31,11 +31,11 @@
                         <option value="Accessories">{{__('information.product.createProduct.accesories')}}</option>
                     </select>
                     <br>
-                    <br><input type="text" placeholder="Details" name="detail" value="{{ old('detail') }}" />
+                    <br><input type="text" placeholder="{{__('information.detail')}}" name="detail" value="{{ old('detail') }}" />
                     <br>
-                    <br><input type="text" placeholder="Price" name="price" value="{{ old('price') }}" />
+                    <br><input type="text" placeholder="{{__('information.price')}}" name="price" value="{{ old('price') }}" />
                     <br>
-                    <br><input type="submit" value="Send" class="btn button_form"/></center>
+                    <br><input type="submit" value="{{__('information.button.send')}}" class="btn button_form"/></center>
                 </form>
 
                 </div>

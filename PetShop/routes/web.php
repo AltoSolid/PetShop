@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 });
 
+Route::get('/home', function () {
+    return view('home.index');
+});
 
 Route::get('/index', 'HomeController@index')->name("home.index");
 
@@ -86,8 +89,11 @@ Route::post('/meeting/save', 'MeetingController@save')->name("meeting.save");
 
 Route::get('/meeting/destroy/{id}', 'MeetingController@destroy')->name("meeting.destroy");
 
+
 //IMAGES
+
 Route::get('/image/index', 'ImageController@index')->name("image.index");
+
 Route::post('/image/save', 'ImageController@save')->name("image.save");
 
 Route::get('/download-pdf','MeetingController@downloadPdf')->name("downloadPdf");

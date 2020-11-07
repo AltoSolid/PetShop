@@ -20,6 +20,16 @@
     
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+         <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
     
 </head>
 
@@ -51,7 +61,7 @@
                         <!-- Future Left Side Links -->
 
                                 <div class="navbar">
-                                    <a class="navbar-brand" href="{{ route('home.index') }}">Home</a>
+                                    <a class="navbar-brand" href="{{ route('home.index') }}">{{__('information.home')}}</a>
                             
                                      <a class="navbar-brand" href="{{ route('pet.show') }}">
                                     {{__('information.master.navBarButtons.showPets')}}
@@ -77,9 +87,7 @@
                                     {{__('information.master.navBarButtons.createMeetings')}}
                                     </a>
 
-                                    <a class="navbar-brand" href="{{route('home.contact') }}">
-                                    {{__('information.master.navBarButtons.contact')}}
-                                    </a>    
+
                                 </div>                
                             </ul>
                             <li class="nav-item">
@@ -108,6 +116,14 @@
             @yield('content')
         </main>
     </div>
+
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="m-0 text-center text-white small">{{__('information.copyright')}}</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
 </body>
 
 <!-- Scripts -->
