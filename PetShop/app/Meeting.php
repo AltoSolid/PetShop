@@ -86,4 +86,5 @@ class Meeting extends Model
     {
         return $this->belongsToMany(User::class,'meeting_user')->withTimestamps();
     }
+
 }

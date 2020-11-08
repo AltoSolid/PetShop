@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Meeting;
+use App\User;
+use App\MeetingUser;
 use PDF;
 class MeetingController extends Controller
 {
@@ -59,5 +61,15 @@ class MeetingController extends Controller
         return $pdf->download('carta.pdf');
     }
 
+    public function assist($id){
+        $meetingId= $id;
+        $userId = auth()->user()->id; 
+        $meetinguser = new MeetingUser();
+        $meetinguser->setUserId($userId);
+        $meetinguser->setMeetingId($meetingId);
+        $meetinguser->save();
+
+        return redirect()->route('meeting.showID',$id);
+    }
     
 }

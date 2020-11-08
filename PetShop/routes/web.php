@@ -63,6 +63,8 @@ Route::get('/cart/showCart', 'ProductController@showCart')->name("product.showCa
 
 Route::post('/cart/payment', 'PaymentController@show')->name("payment.show");
 
+Route::get('/product/userOrders', 'ProductController@viewOrders')->name("product.viewOrders");
+
 
 //ORDER
 
@@ -88,6 +90,8 @@ Route::get('/meeting/show/{id}', 'MeetingController@showId')->name("meeting.show
 Route::post('/meeting/save', 'MeetingController@save')->name("meeting.save");
 
 Route::get('/meeting/destroy/{id}', 'MeetingController@destroy')->name("meeting.destroy");
+
+Route::get('/meeting/assist/{id}', 'MeetingController@assist')->name("meeting.assist");
 
 
 //IMAGES
