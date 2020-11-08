@@ -50,6 +50,7 @@ return [
     "header" => [
         "delete"=> "카드 항목 삭제",
         "see"=> "카드보기",
+        "vieworders" => "순서 보기",
     ],
 
     "mail" => [
@@ -137,7 +138,10 @@ return [
     "order" => [
         "delete" => "성공적으로 제거되었습니다!",
         "create" => "주문 생성",
-        "created" => "주문가 성공적으로 생성되었습니다!!"
+        "created" => "주문가 성공적으로 생성되었습니다!!",
+        "orderId" => "아이디 순서: ",
+        "orderDate" => "- 날짜순서: ",
+        "price" => " - 값: ",
     ],
 
     "meeting" => [
@@ -187,5 +191,6 @@ return [
     "map" => "여기에 있습니다",
     "home" => "호므",
     "copyright" => "저작권 ©; 페트 숍 2020",
+    "assist" => "참석",
 ]
 ?>

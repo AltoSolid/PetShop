@@ -56,4 +56,5 @@ class MeetingUser extends Model
         return $this->belongsTo(Meeting::class,'meeting_id');
     }
 
+    
 }

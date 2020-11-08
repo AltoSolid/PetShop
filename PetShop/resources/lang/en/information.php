@@ -50,6 +50,7 @@ return [
     "header" => [
         "delete"=> "Delete cart items",
         "see"=> "See cart",
+        "vieworders" => "View Orders",
     ],
 
     "mail" => [
@@ -137,7 +138,10 @@ return [
     "order" => [
         "delete" => "It has been removed successfully!",
         "create" => "Create Order",
-        "created" => "The order has been created successfully!"
+        "created" => "The order has been created successfully!",
+        "orderId" => "Order Id: ",
+        "orderDate" => "- Order Date: ",
+        "price" => " - Price: ",
     ],
 
     "meeting" => [
@@ -186,5 +190,6 @@ return [
     "map" => "Locate us",
     "home" => "Home",
     "copyright" => "Copyright ©; PetShop 2020",
+    "assist" => "Assist",
 ]
 ?>

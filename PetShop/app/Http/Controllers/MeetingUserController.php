@@ -12,4 +12,5 @@ class MeetingUserController extends Controller
         $data["meetingUser"] = MeetingUser::all()->sortBy("id");
         return view('meeting.show')->with("data",$data);        
     }
+
 }

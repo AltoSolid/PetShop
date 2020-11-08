@@ -113,6 +113,13 @@
     width: 50%;
   }
   
+  .parts1 {
+      margin-right: 100px;
+  }
+
+  .parts2 {
+      margin-left: 100px;
+  }
   /* Clear floats after the columns */
   .row:after {
     content: "";

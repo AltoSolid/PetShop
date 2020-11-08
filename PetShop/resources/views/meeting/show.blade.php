@@ -25,8 +25,8 @@
                                 @endif
                                 <b>{{__('information.meeting.show.details')}}</b><br />
                                 {{ $meeting->getDetails() }}<br />
-                                <br />
                                 @endforeach
+
                         </ul>
                     </div>
                 </div>

@@ -93,4 +93,19 @@ class ProductController extends Controller
         return redirect()->route('product.show');
     }
 
+    public function viewOrders()
+    {
+        $userId = auth()->user()->id; 
+        $data = []; //to be sent to the view
+        $data["userOrders"] = Order::where("user_id", "=", $userId)->get();        
+        /*
+        userId = auth()->user()->id; 
+        $userOrder = new Order();
+        $userOrder->setUserID($userId);
+        $userOrder->save();
+        */
+
+        return view('product.userOrders')->with("data",$data);        
+    }
+
 }
