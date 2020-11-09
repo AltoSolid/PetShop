@@ -43,14 +43,20 @@
                     </script>
                 </div>
             </div>
-            <section class="masthead text-center text-white">
+            <section class="column">
                 <div class="masthead-content">
                     <div class="container">
                         <a href="{{route('home.contact') }}" class="btn btn-primary btn-xl rounded-pill mt-5">{{__('information.master.navBarButtons.contact')}}</a>
                     </div>
                 </div>
             </section>    
-
+            <section class="column">
+                <div class="masthead-content">
+                    <div class="container">
+                        <a href="{{route('partner.show') }}" class="btn btn-primary btn-xl rounded-pill mt-5">{{__('information.master.navBarButtons.partner')}}</a>
+                    </div>
+                </div>
+            </section>    
         </div>
     </div>
 </div>
