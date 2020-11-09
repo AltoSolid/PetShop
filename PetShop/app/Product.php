@@ -24,54 +24,45 @@ class Product extends Model
         return $this->attributes['id'];
     }
 
-
     public function setId($id)
     {
         $this->attributes['id'] = $id;
     }
-
 
     public function getName()
     {
         return $this->attributes['name'];
     }
 
-
     public function setName($name)
     {
         $this->attributes['name'] = $name;
     }
-
 
     public function getCategory()
     {
         return $this->attributes['category'];
     }
 
-
     public function setCategory($category)
     {
         $this->attributes['category'] = $category;
     }
-
 
     public function getDetail($detail)
     {
         return $this->attributes['detail'];
     }
 
-
     public function setDetail($detail)
     {
         $this->attributes['detail'] = $detail;
     }
 
-
     public function getPrice()
     {
         return $this->attributes['price'];
     }
-
 
     public function setPrice($price)
     {

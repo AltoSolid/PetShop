@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Order;
-use App\OrdersProducts;
 use Illuminate\Http\Request;
 
 
@@ -37,7 +36,6 @@ class ProductController extends Controller
     {
         Product::validate($request);
         Product::create($request->only(["name", "category", "detail", "price"]));
-
         return back()->with(__('information.message.messageSuccess'), __('information.product.createProduct.created'));
     }
 
@@ -48,7 +46,6 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         $data["title"] = $product->getName();
         $data["product"] = $product;
-
         return view('product.showId')->with("data", $data);
     }
 
@@ -63,7 +60,6 @@ class ProductController extends Controller
 
     public function addToCart($id, Request $request)
     {
-        $data = []; //to be sent to the view
         $quantity = $request->quantity;
         $products = $request->session()->get("products");
         $products[$id] = $quantity;
@@ -93,19 +89,12 @@ class ProductController extends Controller
         return redirect()->route('product.show');
     }
 
+
     public function viewOrders()
     {
         $userId = auth()->user()->id; 
         $data = []; //to be sent to the view
         $data["userOrders"] = Order::where("user_id", "=", $userId)->get();        
-        /*
-        userId = auth()->user()->id; 
-        $userOrder = new Order();
-        $userOrder->setUserID($userId);
-        $userOrder->save();
-        */
-
         return view('product.userOrders')->with("data",$data);        
     }
-
 }

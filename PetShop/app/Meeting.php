@@ -24,18 +24,15 @@ class Meeting extends Model
         return $this->attributes['id'];
     }
 
-
     public function setId($id)
     {
         $this->attributes['id'] = $id;
     }
 
-
     public function getDate()
     {
         return $this->attributes['date'];
     }
-
 
     public function setDate($date)
 
@@ -43,24 +40,20 @@ class Meeting extends Model
         $this->attributes['date'] = $date;
     }
 
-
     public function getPlace()
     {
         return $this->attributes['place'];
     }
-
 
     public function setPlace($place)
     {
         $this->attributes['place'] = $place;
     }
 
-
     public function getDetails()
     {
         return $this->attributes['details'];
     }
-
 
     public function setDetails($details)
     {
@@ -86,5 +79,4 @@ class Meeting extends Model
     {
         return $this->belongsToMany(User::class,'meeting_user')->withTimestamps();
     }
-
 }

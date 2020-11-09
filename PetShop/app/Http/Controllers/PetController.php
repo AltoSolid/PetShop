@@ -20,10 +20,7 @@ class PetController extends Controller
     public function show()
     {
         $data = []; //to be sent to the view
-
         $pet = Pet::all();
-
-        //$data["title"] = $pet->getPetName();
         $data["pets"] = $pet;
         return view('pet.show')->with("data", $data);
     }
@@ -34,7 +31,6 @@ class PetController extends Controller
         $data = []; //to be sent to the view
         $pet = Pet::findOrFail($id);
         $data["pets"] = $pet;
-
         $data["title"] = $pet->getPetName();
         return view('pet.petInfo')->with("data", $data);
     }
@@ -44,7 +40,6 @@ class PetController extends Controller
     {
         $pet = Pet::findOrFail($id);
         $pet->delete();
-
         return redirect()->route('pet.show');
     }
 
@@ -53,9 +48,6 @@ class PetController extends Controller
     {
         Pet::validate($request);
         Pet::create($request->only(["petName", "typeAnimal", "typeAnimal", "medicalHistory", "raceAnimal", "available", "genre", "age","image"]));
-
         return back()->with(__('information.message.messageSuccess'), __('information.pet.success'));
-    }
-
-    
+    }    
 }

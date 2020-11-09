@@ -2,8 +2,6 @@
 
 //Autor : Felipe Ríos López
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\MeetingUser;
 class MeetingUserController extends Controller
 {

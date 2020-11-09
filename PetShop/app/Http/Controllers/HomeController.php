@@ -2,10 +2,7 @@
 
 //Author: Santiago Hincapié Murillo
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use App;
 
 class HomeController extends Controller
 {

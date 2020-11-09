@@ -30,24 +30,20 @@ class Order extends Model
         $this->attributes['id']= $id;
     }
 
-
     public function getOrderDate()
     {
         return $this->attributes['orderDate'];
     }
-
 
     public function setOrderDate($orderDate)
     {
         $this->attributes['orderDate'] = $orderDate;
     }
 
-
     public function getPrice()
     {
         return $this->attributes['price'];
     }
-
 
     public function setPrice($price)
     {

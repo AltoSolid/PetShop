@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Meeting;
-use App\User;
 use App\MeetingUser;
 use PDF;
 class MeetingController extends Controller
@@ -22,7 +21,6 @@ class MeetingController extends Controller
     {
         $data = []; 
         $meeting = Meeting::findOrFail($id);
-        
         $data["title"]       = $meeting->getPlace();
         $data["meeting"]     = $meeting;  
         $data["meetinguser"] = Meeting::with('users')->get()->where('id',$id); //The pivot table, method users in MEETING  
@@ -55,11 +53,12 @@ class MeetingController extends Controller
 
     }
 
+
     public function downloadPdf(){
-        $data = Meeting::all();
         $pdf = PDF::loadView('pdf')->setPaper('a4','landscape');
         return $pdf->download('carta.pdf');
     }
+
 
     public function assist($id){
         $meetingId= $id;
@@ -68,7 +67,6 @@ class MeetingController extends Controller
         $meetinguser->setUserId($userId);
         $meetinguser->setMeetingId($meetingId);
         $meetinguser->save();
-
         return redirect()->route('meeting.showID',$id);
     }
     
