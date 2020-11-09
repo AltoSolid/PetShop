@@ -192,5 +192,6 @@ return [
     "map" => "Locate us",
     "home" => "Home",
     "copyright" => "Copyright ©️; PetShop 2020",
+    "assist" => "Assist",
 ]
 ?>
