@@ -10,37 +10,29 @@
                     <p class="info">{{__('information.pet.petShow')}}</p>
                 </div>
                 <div class="card-body">
-
+                    @foreach($data["pets"] as $pet)
+                        @if($loop->iteration <=2) <li>
+                        <b><a href="{{ route('pet.petInfo', $pet->getId()) }}">{{ $pet->getId() }} - {{ $pet->getPetName() }}</a>
+                            <form action="{{ route('pet.delete',$pet->getId()) }}">
+                                <input type="submit" value="{{__('information.pet.deleteButton')}}" class="btn button_form" />
+                            </form>
+                        </b>
+                        <br>
+                        </li>
+                        @else
+                        <li>
+                            <a href="{{ route('pet.petInfo', $pet->getId()) }}">{{ $pet->getId() }} - {{ $pet->getPetName() }}</a>
+                            <form action="{{ route('pet.delete',$pet->getId()) }}">
+                                <input type="submit" value="{{__('information.pet.deleteButton')}}" class="btn button_form" />
+                            </form>
+                        </li>
+                        @endif
+                    @endforeach
 
                 </div>
             </div>
         </div>
     </div>
-    <div class="row p-5">
-        <div class="col-md-12">
-            <ul id="errors">
-                @foreach($data["pets"] as $pet)
-                @if($loop->iteration <=2) <li>
-                    <b><a href="{{ route('pet.petInfo', $pet->getId()) }}">{{ $pet->getId() }}</a> - {{ $pet->getPetName() }}
-                        <form action="{{ route('pet.delete',$pet->getId()) }}">
-                            <input type="submit" value="{{__('information.pet.deleteButton')}}" class="btn button_form" />
-                        </form>
-                    </b>
-                    <br>
-                    </li>
-                    @else
-                    <li>
-                        <a href="{{ route('pet.petInfo', $pet->getId()) }}">{{ $pet->getId() }}</a> - {{ $pet->getPetName() }}
-                        <form action="{{ route('pet.delete',$pet->getId()) }}">
-                            <input type="submit" value="{{__('information.pet.deleteButton')}}" class="btn button_form" />
-                        </form>
-                    </li>
-                    @endif
-                    @endforeach
-            </ul>
-        </div>
-    </div>
-
 </div>
 
 @endsection

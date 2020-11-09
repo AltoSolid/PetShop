@@ -50,7 +50,7 @@ return [
     "header" => [
         "delete"=> "Delete cart items",
         "see"=> "See cart",
-        "vieworders" => "View Orders",
+        "vieworders" =>"View Orders",
     ],
 
     "mail" => [
@@ -67,6 +67,7 @@ return [
             "showMeetings" => "Show meetings",
             "createMeetings" => "Create meeting",
             "contact" => "Contact",
+            "partner" => "Clothing shop",
         ],
     ],
 
@@ -139,9 +140,9 @@ return [
         "delete" => "It has been removed successfully!",
         "create" => "Create Order",
         "created" => "The order has been created successfully!",
-        "orderId" => "Order Id: ",
-        "orderDate" => "- Order Date: ",
-        "price" => " - Price: ",
+        "orderId" => "Order ID: ",
+        "orderDate" => " - Order Date: ",
+        "price" => " - Price: "
     ],
 
     "meeting" => [
@@ -183,13 +184,13 @@ return [
     "button" => [
         "return" => "return",
         "send" => "send",
+        "partner" => "Akiestálainfodelaapi",
     ],
     "detail" => "Details",
     "price" => "Price",
     "logo" => "logo",
     "map" => "Locate us",
     "home" => "Home",
-    "copyright" => "Copyright ©; PetShop 2020",
-    "assist" => "Assist",
+    "copyright" => "Copyright ©️; PetShop 2020",
 ]
 ?>

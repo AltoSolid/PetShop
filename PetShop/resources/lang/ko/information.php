@@ -67,6 +67,7 @@ return [
             "showMeetings" => "회의 보기",
             "createMeetings" => "새로운 회의",
             "contact" => "연락합니다",
+            "partner" => "옷가게",
         ],
     ],
 
@@ -139,9 +140,9 @@ return [
         "delete" => "성공적으로 제거되었습니다!",
         "create" => "주문 생성",
         "created" => "주문가 성공적으로 생성되었습니다!!",
-        "orderId" => "아이디 순서: ",
-        "orderDate" => "- 날짜순서: ",
-        "price" => " - 값: ",
+        "orderId" => "순서 아이디 ",
+        "orderDate" => "순서 날짜 ",
+        "price" => "순서 값",
     ],
 
     "meeting" => [
@@ -184,13 +185,13 @@ return [
     "button" => [
         "return" => "뒤",
         "send" => "보내다",
+        "partner" => "여기에",
     ],
     "detail" => "세부",
     "price" => "값",
     "logo" => "로고",
     "map" => "여기에 있습니다",
     "home" => "호므",
-    "copyright" => "저작권 ©; 페트 숍 2020",
-    "assist" => "참석",
+    "copyright" => "저작권 ©️; 페트 숍 2020",
 ]
 ?>

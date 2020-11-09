@@ -110,3 +110,6 @@ Auth::routes();
 //LANG
 
 Route::get('/lang/{locale}', 'HomeController@changeLang')->name("home.lang");
+
+
+Route::get('/partner/show', "PartnerController@list")->name('partner.show');
